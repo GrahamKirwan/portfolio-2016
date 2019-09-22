@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Changes the box model so that borders and paddings arent included in the size of a box*/ }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #4a4a4a; }
+
+.heading-primary {
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    color: #293347;
+    display: block;
+    font-size: 4.8rem;
+    font-weight: 900;
+    text-transform: uppercase; }
+    .heading-primary--main--name {
+      color: #8b43ff; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 300;
+    padding-top: 1.5rem; }
+
+.header {
+  height: 100vh; }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header__image {
+    width: 80rem;
+    padding-bottom: -30rem; }
+
+.section-about {
+  background-color: green; }

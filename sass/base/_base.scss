@@ -1,0 +1,37 @@
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; /* Changes the box model so that borders and paddings arent included in the size of a box*/
+    
+}
+
+// These media queries will enable everything on the website defined in rems to scale to size
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; // This is 10px.... 1 rem = 10px;  10px/16px = 62.5%
+
+    
+    // @include respond(tab-land) { // width < 1200?
+    //     font-size: 56.25%; // 1 rem = 9px, 9px/16px = 56.25%
+    // }
+
+    // @include respond(tab-port) { // width < 900?
+    //     font-size: 50%; // 1 rem = 8px, 8px/16px = 50%
+    // }
+
+    // @include respond(phone) { // width < 600?
+    //     font-size: 50%; // 1 rem = 8px, 8px/16px = 50%
+    // }
+
+    // @include respond(big-desktop) { // width greater than 1800?
+    //     font-size: 75%; // 1 rem = 12px, 12px/16px = 75%
+    // }
+}
+
+
+
+// ::selection { // highligted text color
+//     background-color: $color-one;
+//     color: $color-white;
+// }

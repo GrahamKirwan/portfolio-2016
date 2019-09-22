@@ -1,0 +1,33 @@
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-para;
+}
+
+.heading-primary {
+    
+    
+    margin-bottom: 6rem;
+
+    &--main {
+        color: $color-heading;
+        display: block;
+        font-size: 4.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    
+        &--name {
+            color: $color-one;
+        }
+        
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2.4rem;
+        font-weight: 300;
+        padding-top: 1.5rem;
+       
+    }
+}

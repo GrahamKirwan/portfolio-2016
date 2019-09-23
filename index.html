@@ -6,12 +6,12 @@
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-        <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
-        <!-- <link rel="stylesheet" href="css/font-icon.css"> -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="shortcut icon" type="image/png" href="img/logo-white.png"> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         
+
+        <script src="https://kit.fontawesome.com/70e85b8672.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+
         <title>GRAHAM KIRWAN | Front End Web Developer Portfolio</title>
     </head>
     <body>
@@ -21,25 +21,155 @@
                 <img src="img/logo.png" alt="Graham Kirwan logo" class="header__logo">
             </div>
 
-            <div class="header__text-box">
+            <div class="header__navigation">
+                <nav class="header__navigation--nav">
+                    <ul class="header__navigation--list">
+                        <li class="header__navigation--item"><a href="#" class="header__navigation--link">About</a></li>
+                        <li class="header__navigation--item"><a href="#" class="header__navigation--link">Projects</a></li>
+                        <li class="header__navigation--item"><a href="#" class="header__navigation--link">Testimonials</a></li>
+                        <li class="header__navigation--item"><a href="#" class="header__navigation--link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__text-box u-margin-top-big">
                 <h1 class="heading-primary">
                     <span class="heading-primary--main">Hello, i'm <span class="heading-primary--main--name">Graham Kirwan.</span></span>
                     <span class="heading-primary--sub">I'm a Toronto based web designer & front‑end developer focused on crafting clean & user‑friendly experiences.</span>
                 </h1>
 
-                <a href="#" class="btn btn--white">View my work</a>
+                <a href="#" class="btn btn--white">View my work 
+                    <span class="btn--arrow--space"><i class="material-icons btn--arrow">arrow_forward</i></span>
+                </a>
 
-                <div class="header__hero">
-                    <img src="img/hero.png" alt="hero image" class="header__image">
-                </div>
+                
             </div>
 
-            
+            <div class="header__hero">
+                <div class="header__hero--center">
+                    <img src="img/hero1.png" alt="hero image" class="header__image">
+                </div>
+                
+            </div>
         </header>
 
         <section class="section-about">
-            <h2>ilbdijfb</h2>
+            <div class="u-center-text u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                    About Me
+                </h2>
+                <div class="heading-secondary--underline"></div>
+            </div>
+
+            <div class="paragraph__box">
+                <div class="paragraph__box--container">
+                    <p class="paragraph__box--text u-center-text">Since beginning my journey as a freelance designer nearly 8 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
+                </div>
+            </div>
         </section>
+        <section class="section-skills u-center-text">
+            <div class="skills__container">
+                    <div class="skills">
+                            <div class="row">
+                                <div class="col-1-of-4">
+                                    <div class="skills__content-box">
+                                        <div class="skills__content-box--circle"><i class="far fa-lightbulb skills__content-box--icon"></i></div>
+                                        <h3 class="heading-tertiary">Intuitive</h3>
+                                        <p class="skills__content-box--text u-center-text">Strong preference for easy to use, intuitive UX/UI.</p>
+                                    </div>
+                                </div>
+                                <div class="col-1-of-4">
+                                    <div class="skills__content-box">
+                                        <div class="skills__content-box--circle"><i class="fas fa-stopwatch skills__content-box--icon"></i></div>
+                                        <h3 class="heading-tertiary">Fast</h3>
+                                        <p class="skills__content-box--text u-center-text">Fast load times and lag free interaction, my highest priority.</p>
+                                    </div>
+                                </div>
+                                <div class="col-1-of-4">
+                                    <div class="skills__content-box">
+                                        <div class="skills__content-box--circle"><i class="fas fa-desktop skills__content-box--icon"></i></div>
+                                        <h3 class="heading-tertiary">Responsive</h3>
+                                        <p class="skills__content-box--text u-center-text">My layouts will work on any device, big or small.</p>
+                                    </div>
+                                </div>
+                                <div class="col-1-of-4">
+                                    <div class="skills__content-box">
+                                        <div class="skills__content-box--circle"><i class="fas fa-space-shuttle skills__content-box--icon"></i></div>
+                                        <h3 class="heading-tertiary">Dynamic</h3>
+                                        <p class="skills__content-box--text u-center-text">Websites don't have to be static, I love making pages come to life.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-margin-bottom-medium">
+                            <div class="row u-center-text u-margin-top-medium">
+                                    <div class="col-1-of-10"><i class="fab fa-html5 skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-css3-alt skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-sass skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-bootstrap skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-js skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-npm skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-git skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-github skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-adobe skills__content-box--skillsicon"></i></div>
+                                    <div class="col-1-of-10"><i class="fab fa-wordpress skills__content-box--skillsicon"></i></div>
+                            </div>
+                        </div>
+                        
+            </div>
+
+            <div class="section-projects">
+                    <div class="u-center-text u-margin-bottom-medium">
+                            <h2 class="heading-secondary">
+                                <span class="heading-secondary--purple">Projects</span>
+                            </h2>
+                            <div class="heading-secondary--underline--purple"></div>
+                    </div>
+
+                    <div class="projects__container">
+                        <div class="row">
+                            <div class="col-1-of-3">
+                                <div class="projects__card u-center-text">
+                                    <img src="img/logo.png" alt="" class="projects__card--image">
+                                    <h3 class="heading-tertiary">SDG Challenge</h3>
+                                    <p class="skills__content-box--text">Websites don't have to be static, I love making pages come to life. Websites don't have to be static, I love making pages come to life.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+            <!-- <div class="skills">
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="skills__content-box">
+                            <div class="skills__content-box--circle"> <i class="material-icons skills__content-box--icon">speed</i></div>
+                            <h3 class="heading-tertiary">Fast</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="skills__content-box">
+                            <div class="skills__content-box--circle"><i class="material-icons skills__content-box--icon">phonelink</i></div>
+                            <h3 class="heading-tertiary">Responsive</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="skills__content-box">
+                            <div class="skills__content-box--circle"><i class="material-icons skills__content-box--icon">lightbulb</i></div>
+                            <h3 class="heading-tertiary">Intuitive</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="skills__content-box">
+                            <div class="skills__content-box--circle"><i class="material-icons skills__content-box--icon">build</i></div>
+                            <h3 class="heading-tertiary">Dynamic</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        
 
 
     </body>

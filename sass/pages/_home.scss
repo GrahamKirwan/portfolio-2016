@@ -1,3 +1,10 @@
 .section-about {
-    background-color: green;
+    background-color: $color-one;
+    height: 65rem;
+    margin-top: -.2rem;
+}
+
+.section-skills {
+    background-color: $color-white;
+    height: 80rem;
 }

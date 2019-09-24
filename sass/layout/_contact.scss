@@ -1,0 +1,36 @@
+.contact__width {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.contact__container {
+
+    &--link {
+        text-decoration: none;
+        display: inline-block;
+
+    }
+
+    &--heading {
+        color: $color-white;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding-top: 1rem;
+    }
+
+    &--icon {
+        font-size: 4.5rem;
+        color: $color-white;
+        padding-top: 2rem;
+    }
+
+        
+}
+
+
+.contact__hr {
+    width: 80%;
+    margin: 0 auto;
+    background-color: darken(#293347, 50%);
+}

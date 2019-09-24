@@ -27,6 +27,30 @@
         padding-bottom: 1.5rem;
         font-size: 1.4rem;
         letter-spacing: .01rem;
+
+        &--mail {
+            color: $color-one;
+        }
+
+        &--link {
+            text-decoration: none;
+        }
+
+        &--white {
+            padding: 0 1.5rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.4rem;
+            letter-spacing: .01rem;
+            color: $color-white;
+        }
+
+        &--purple {
+            padding: 0 1.5rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.4rem;
+            letter-spacing: .01rem;
+            color: $color-one;
+        }
     }
 
     &--links {

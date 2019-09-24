@@ -70,6 +70,13 @@ body {
     height: .5rem;
     width: 11rem;
     background-color: #fff; }
+  .heading-secondary--underline-heading {
+    display: inline-block;
+    height: .5rem;
+    width: 11rem;
+    background-color: #293347; }
+  .heading-secondary--heading {
+    color: #293347; }
   .heading-secondary--purple {
     color: #8b43ff; }
   .heading-secondary--underline--purple {
@@ -95,6 +102,18 @@ body {
   font-size: 2rem;
   font-weight: 700;
   padding-bottom: 1.5rem; }
+  .heading-tertiary--white {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem; }
+  .heading-tertiary--purple {
+    color: #8b43ff;
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 1rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -105,17 +124,32 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
 
+.u-margin-bottom-large {
+  margin-bottom: 6rem !important; }
+
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
 
 .u-margin-top-big {
   margin-top: 30rem !important; }
 
+.u-margin-top-large {
+  margin-top: 10.5rem !important; }
+
 .u-margin-top-medium {
   margin-top: 6.5rem !important; }
 
 .u-margin-top-small {
   margin-top: 1.5rem; }
+
+.u-padding-top-large {
+  padding-top: 10rem !important; }
+
+.u-padding-bottom-medium {
+  padding-bottom: 10rem !important; }
+
+.u-padding-bottom-small {
+  padding-bottom: 7rem !important; }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
@@ -171,6 +205,22 @@ body {
     padding-bottom: 1.5rem;
     font-size: 1.4rem;
     letter-spacing: .01rem; }
+    .projects__card--text--mail {
+      color: #8b43ff; }
+    .projects__card--text--link {
+      text-decoration: none; }
+    .projects__card--text--white {
+      padding: 0 1.5rem;
+      padding-bottom: 1.5rem;
+      font-size: 1.4rem;
+      letter-spacing: .01rem;
+      color: #fff; }
+    .projects__card--text--purple {
+      padding: 0 1.5rem;
+      padding-bottom: 1.5rem;
+      font-size: 1.4rem;
+      letter-spacing: .01rem;
+      color: #8b43ff; }
   .projects__card--links {
     text-decoration: none;
     font-size: 1.7rem;
@@ -184,7 +234,7 @@ body {
     padding-left: .5rem; }
 
 .skills {
-  padding-top: 5rem; }
+  padding: 5rem 0; }
   .skills__content-box {
     text-align: center; }
     .skills__content-box--circle {
@@ -208,9 +258,9 @@ body {
       display: inline-block;
       font-size: 3.2rem;
       color: #293347;
-      transition: all .2s; }
+      transition: all .7s; }
       .skills__content-box--skillsicon:hover {
-        transform: scale(1.5);
+        transform: rotate(360deg) scale(2);
         color: #8b43ff; }
 
 .skills__container {
@@ -221,6 +271,47 @@ body {
   display: inline-block;
   margin-top: -25rem;
   box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8; }
+
+.testimonial__container--image {
+  max-width: 9.6rem;
+  border-radius: 100%;
+  margin-bottom: 2.5rem;
+  border: 3px solid #fff; }
+
+.testimonial__container--text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  line-height: 1.6; }
+
+.testimonial__container--qoute {
+  font-size: 3rem; }
+
+.contact__width {
+  max-width: 40rem;
+  margin: 0 auto; }
+
+.contact__container--link {
+  text-decoration: none;
+  display: inline-block; }
+
+.contact__container--heading {
+  color: #fff;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 1rem; }
+
+.contact__container--icon {
+  font-size: 4.5rem;
+  color: #fff;
+  padding-top: 2rem; }
+
+.contact__hr {
+  width: 80%;
+  margin: 0 auto;
+  background-color: black; }
 
 .row {
   max-width: 114rem;
@@ -309,4 +400,9 @@ body {
 .section-testimonials {
   background-color: #8b43ff;
   height: 65rem;
-  margin-top: 7rem; }
+  margin-top: 20rem; }
+
+.section-footer {
+  background-color: #293347;
+  -webkit-clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0); }

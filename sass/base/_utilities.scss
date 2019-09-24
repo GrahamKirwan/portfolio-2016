@@ -11,6 +11,14 @@
     //     margin-bottom: 3rem !important;
     // }
 }
+
+.u-margin-bottom-large {
+    margin-bottom: 6rem !important;
+
+    // @include respond(tab-port) {
+    //     margin-bottom: 3rem !important;
+    // }
+}
 .u-margin-bottom-big {
     margin-bottom: 8rem !important;
 
@@ -23,10 +31,26 @@
     margin-top: 30rem !important;
 }
 
+.u-margin-top-large {
+    margin-top: 10.5rem !important;
+}
+
 .u-margin-top-medium {
     margin-top: 6.5rem !important;
 }
 
 .u-margin-top-small {
     margin-top: 1.5rem;
+}
+
+.u-padding-top-large {
+    padding-top: 10rem !important;
+}
+
+.u-padding-bottom-medium {
+    padding-bottom: 10rem !important;
+}
+
+.u-padding-bottom-small {
+    padding-bottom: 7rem !important;
 }

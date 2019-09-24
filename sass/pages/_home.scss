@@ -12,5 +12,11 @@
 .section-testimonials {
     background-color: $color-one;
     height: 65rem;
-    margin-top: 7rem;
+    margin-top: 20rem;
+}
+
+.section-footer {
+    background-color: #293347;
+    -webkit-clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
 }

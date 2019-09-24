@@ -109,10 +109,13 @@ body {
   margin-bottom: 8rem !important; }
 
 .u-margin-top-big {
-  margin-top: 32rem !important; }
+  margin-top: 30rem !important; }
 
 .u-margin-top-medium {
   margin-top: 6.5rem !important; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem; }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
@@ -150,11 +153,35 @@ body {
   color: #c6c6c6; }
 
 .projects__card {
-  background-color: red;
-  border-radius: 1rem;
-  height: 40.2rem; }
+  border-radius: .5rem;
+  height: 40rem;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+  background-color: #fff; }
+  .projects__card--thumbnail {
+    width: 100%;
+    height: 50%;
+    object-fit: cover; }
   .projects__card--image {
-    width: 100%; }
+    height: 100%;
+    object-fit: inherit;
+    margin-left: -2rem; }
+  .projects__card--text {
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: .01rem; }
+  .projects__card--links {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #293347;
+    padding-right: 2rem;
+    transition: all .1s; }
+    .projects__card--links:hover {
+      color: #8b43ff; }
+  .projects__card--icons {
+    font-size: 1.5rem;
+    padding-left: .5rem; }
 
 .skills {
   padding-top: 5rem; }
@@ -183,7 +210,8 @@ body {
       color: #293347;
       transition: all .2s; }
       .skills__content-box--skillsicon:hover {
-        transform: scale(1.5); }
+        transform: scale(1.5);
+        color: #8b43ff; }
 
 .skills__container {
   background-color: #fff;
@@ -239,15 +267,11 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
   .header__hero {
-    display: block;
     position: absolute;
     bottom: 0;
-    width: 100%; }
-    .header__hero--center {
-      width: 100%; }
+    width: 25%; }
   .header__image {
-    width: 100%;
-    display: block; }
+    height: 45vh; }
 
 .header__navigation--nav {
   display: block; }
@@ -279,5 +303,10 @@ body {
   margin-top: -.2rem; }
 
 .section-skills {
-  background-color: #fff;
-  height: 80rem; }
+  background-color: #fcfcfc;
+  height: 100%; }
+
+.section-testimonials {
+  background-color: #8b43ff;
+  height: 65rem;
+  margin-top: 7rem; }

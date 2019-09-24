@@ -22,24 +22,14 @@
     }
 
     &__hero {
-        display: block;
         position: absolute;
         bottom: 0;
-        width: 100%;
-
-        &--center {
-            width: 100%;
-        // margin: 0 auto;
-        }
+        width: 25%;
     }
 
     &__image {
-        // position: fixed;
-        width: 100%;
-        // margin: 0 auto;
-        display: block;
+        height: 45vh;
     }
-
 
 
 }

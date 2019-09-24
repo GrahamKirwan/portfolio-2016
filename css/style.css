@@ -25,6 +25,7 @@
   /* Changes the box model so that borders and paddings arent included in the size of a box*/ }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
 
 ::selection {

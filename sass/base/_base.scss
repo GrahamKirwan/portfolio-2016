@@ -8,6 +8,10 @@
 
 // These media queries will enable everything on the website defined in rems to scale to size
 html {
+
+    
+    scroll-behavior: smooth;
+    
     // This defines what 1rem is
     font-size: 62.5%; // This is 10px.... 1 rem = 10px;  10px/16px = 62.5%
 

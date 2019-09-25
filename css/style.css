@@ -206,10 +206,12 @@ body {
     padding-bottom: 1.5rem;
     font-size: 1.4rem;
     letter-spacing: .01rem; }
-    .projects__card--text--mail {
+    .projects__card--text--mail:link, .projects__card--text--mail:visited {
+      text-decoration: none;
       color: #8b43ff; }
-    .projects__card--text--link {
-      text-decoration: none; }
+    .projects__card--text--link:link, .projects__card--text--link:visited {
+      text-decoration: none;
+      color: #8b43ff; }
     .projects__card--text--white {
       padding: 0 1.5rem;
       padding-bottom: 1.5rem;
@@ -228,6 +230,13 @@ body {
     color: #293347;
     padding-right: 2rem;
     transition: all .1s; }
+    .projects__card--links--nopad {
+      text-decoration: none;
+      font-size: 1.7rem;
+      color: #293347;
+      transition: all .1s; }
+      .projects__card--links--nopad:hover {
+        color: #8b43ff; }
     .projects__card--links:hover {
       color: #8b43ff; }
   .projects__card--icons {

@@ -81,6 +81,10 @@ body {
     &--container {
         width: 60%;
         margin: 0 auto;
+
+        @include respond(phone) {
+            width: 90%;
+        }
     }
 
     &--text {
@@ -90,6 +94,8 @@ body {
         color: $color-white;
         // word-spacing: .1rem;
         letter-spacing: .1rem;
+
+        
     }
 }
 

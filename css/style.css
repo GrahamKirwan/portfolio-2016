@@ -164,7 +164,7 @@ body {
 .u-padding-bottom-small {
   padding-bottom: 7rem !important; }
 
-.btn, .btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited, .btn:active, .btn:focus {
   text-decoration: none;
   padding: 1.2rem 5rem 1.2rem 2rem;
   display: inline-block;
@@ -189,11 +189,6 @@ body {
 
 .btn:hover .btn--arrow {
   transform: rotate(90deg); }
-
-.btn:active, .btn:focus {
-  outline: none;
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn--white {
   background-color: #fff;

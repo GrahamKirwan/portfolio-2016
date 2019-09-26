@@ -1,7 +1,9 @@
 .btn {
     &, // only a links have link and visited pseudo tags so have to add this line for the <button> element
     &:link,
-    &:visited {
+    &:visited,
+    &:active,
+    &:focus {
         text-decoration: none;
         padding: 1.2rem 5rem 1.2rem 2rem;
         display: inline-block;
@@ -39,12 +41,12 @@
     //     box-shadow: 0 10px 20px rgba(#000000, 0.2);
     // }
 
-    &:active,
-    &:focus { // add focus line for <button> element
-        outline: none; // outline none for <button> element
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(#000000, 0.2);
-    }
+    // &:active,
+    // &:focus { // add focus line for <button> element
+    //     outline: none; // outline none for <button> element
+    //     transform: translateY(-1px);
+    //     box-shadow: 0 5px 10px rgba(#000000, 0.2);
+    // }
 
     &--white {
         background-color: $color-white;

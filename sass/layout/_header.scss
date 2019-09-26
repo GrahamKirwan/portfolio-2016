@@ -2,6 +2,8 @@
     height: 100vh;
     position: relative;
 
+    
+
     &__logo-box {
         position: absolute;
         top: 3rem;
@@ -19,6 +21,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+
+        @include respond(tab-land) {
+            top: 25%;
+        }
+
+        @include respond(phone) {
+            width: 85%;
+        }
     }
 
     &__hero {
@@ -29,6 +39,10 @@
 
     &__image {
         height: 45vh;
+
+        @include respond(tab-land) {
+            display: none;
+        }
     }
 
 

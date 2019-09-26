@@ -27,6 +27,18 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 ::selection {
   background-color: #8b43ff;
@@ -281,6 +293,12 @@ body {
   display: inline-block;
   margin-top: -20rem;
   box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8; }
+  @media (max-width: 56.25em) {
+    .skills__container {
+      margin-top: -10rem; } }
+  @media (max-width: 37.5em) {
+    .skills__container {
+      margin-top: -5rem; } }
 
 .testimonial__container--image {
   max-width: 9.6rem;
@@ -328,6 +346,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -336,6 +361,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -367,12 +399,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+    @media (max-width: 75em) {
+      .header__text-box {
+        top: 25%; } }
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        width: 85%; } }
   .header__hero {
     position: absolute;
     bottom: 0;
     width: 25%; }
   .header__image {
     height: 45vh; }
+    @media (max-width: 75em) {
+      .header__image {
+        display: none; } }
+
+@media (max-width: 56.25em) {
+  .header__navigation {
+    display: none; } }
 
 .header__navigation--nav {
   display: block; }
@@ -416,3 +461,7 @@ body {
   background-color: #293347;
   -webkit-clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
   clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0); }
+  @media (max-width: 56.25em) {
+    .section-footer {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }

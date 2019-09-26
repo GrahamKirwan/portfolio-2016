@@ -101,6 +101,9 @@ body {
 .paragraph__box--container {
   width: 60%;
   margin: 0 auto; }
+  @media (max-width: 37.5em) {
+    .paragraph__box--container {
+      width: 90%; } }
 
 .paragraph__box--text {
   font-size: 1.9rem;
@@ -293,7 +296,7 @@ body {
       margin-top: -10rem; } }
   @media (max-width: 37.5em) {
     .skills__container {
-      margin-top: -5rem; } }
+      margin-top: 2rem; } }
 
 .testimonial__container--image {
   max-width: 9.6rem;
@@ -399,7 +402,8 @@ body {
         top: 25%; } }
     @media (max-width: 37.5em) {
       .header__text-box {
-        width: 85%; } }
+        width: 85%;
+        padding-bottom: 10rem; } }
   .header__hero {
     position: absolute;
     bottom: 0;

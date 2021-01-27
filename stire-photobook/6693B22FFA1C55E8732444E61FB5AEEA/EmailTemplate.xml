@@ -1,0 +1,48 @@
+<templates>
+	<emailsubject>
+		<![CDATA[$subject]]>
+	</emailsubject>
+	<emailbody>
+		<![CDATA[ 
+		<html>
+			<title>IHDP Email Message</title>
+			<body>
+				<span>Hi $receivername|$receiveremail,</span><br />
+				<br />
+				<span>$sendername|$senderemail wrote these comments for you:</span><br />
+				<br />
+				<span>$message</span><br/><br/>
+				<span>$sendername|$senderemail would like for you to view the following digital edition.</span><br />
+				<br />
+				<span>Please click on the page below to be directed to the digital edition:</span>
+				<br/>
+				<br/>
+				<span>$thumbnail$pagenum $link$pagenum</span>
+				<br/>
+			</body>
+		</html>
+		]]>
+	</emailbody>
+	<emailsubjectcrop>
+		<![CDATA[$subject]]>
+	</emailsubjectcrop>
+	<emailbodycrop>
+		<![CDATA[ 
+		<html>
+			<title>IHDP Email Message</title>
+			<body>
+				<span>Hi $receivername|$receiveremail,</span><br /><br />
+				<span>$sendername|$senderemail wrote these comments for you:</span><br /><br />
+				<span>$message</span>
+				<br/>
+				<br/>
+				<span>$sendername|$senderemail would like for you to view the following digital edition.</span><br /><br />
+				<span>Please click on the link below to be directed to the digital edition:</span><br/><br/>
+				<span>$crop</span>
+				<br/>
+				<span>$link$pagenum</span>
+			</body>
+		</html>
+		]]>
+	</emailbodycrop>
+</templates>

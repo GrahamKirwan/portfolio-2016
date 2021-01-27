@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GetLanguageResult>
+<locale>
+  <!-- Tooltips-->
+  <item name="ttCrop"><![CDATA[ Crop]]></item>
+  <item name="ttPrint"><![CDATA[ Print]]></item>
+  <item name="ttShare"><![CDATA[ Share]]></item>
+  <item name="ttSettings"><![CDATA[ Settings]]></item>
+  <item name="ttBackCover"><![CDATA[ Back Cover]]></item>
+  <item name="ttBookmarks"><![CDATA[ Bookmarks]]></item>
+  <item name="ttNotes"><![CDATA[ Notes]]></item>
+  <item name="ttRSSFeeds"><![CDATA[ RSS]]></item>
+  <item name="ttSinglePage"><![CDATA[ Switch to Single Page Mode]]></item>
+  <item name="ttDoublePage"><![CDATA[ Switch to Double Page Mode]]></item>
+  <item name="ttFirstPage"><![CDATA[ Front Cover]]></item>
+  <item name="ttPreviousPage"><![CDATA[ Previous Page]]></item>
+  <item name="ttNextPage"><![CDATA[ Next Page]]></item>
+  <item name="ttLastPage"><![CDATA[ Last Page]]></item>
+  <item name="ttCurrentPage"><![CDATA[ You are at page $page from $total]]></item>
+  <item name="ttFullScreen"><![CDATA[ Full Screen]]></item>
+  <item name="ttNormalScreen"><![CDATA[ Normal Screen Size]]></item>
+  <item name="ttSearch"><![CDATA[ Search]]></item>
+  <item name="ttAdvanceSearch"><![CDATA[ Advance Search]]></item>
+  <item name="ttDownloadPDF"><![CDATA[ Download PDF]]></item>
+  <item name="ttTranslate"><![CDATA[ Translate]]></item>
+  <item name="ttSearchCurrent"><![CDATA[ Search in current issue]]></item>
+  <item name="ttSearchArchive"><![CDATA[ Search in Archive]]></item>
+  <item name="ttHelp"><![CDATA[ Help]]></item>
+  <item name="ttPlay"><![CDATA[ Play]]></item>
+  <item name="ttPause"><![CDATA[ Pause]]></item>
+  <item name="ttSlideShowSpeed"><![CDATA[ Slide Show Speed]]></item>
+  <item name="ttSlow"><![CDATA[ Slow]]></item>
+  <item name="ttMedium"><![CDATA[ Medium]]></item>
+  <item name="ttFast"><![CDATA[ Fast]]></item>
+  <item name="ttTableOfContent"><![CDATA[ Table Of Contents]]></item>
+  <item name="ttDeleteNote"><![CDATA[ Delete Note]]></item>
+  <item name="ttDeleteBookmark"><![CDATA[ Delete Bookmark]]></item>
+  <item name="ttShoppingCartText"><![CDATA[ Shopping Cart]]></item>
+  <!--Tabs -->
+  <item name="tbMenu"><![CDATA[ Menu]]></item>
+  <item name="tbArchive"><![CDATA[ Archive]]></item>
+  <item name="tbSearch"><![CDATA[ Search]]></item>
+  <item name="tbTOC"><![CDATA[ Contents]]></item>
+  <item name="tbThumbnails"><![CDATA[ Thumbnails]]></item>
+  <item name="tbLinks"><![CDATA[ Advertisers]]></item>
+  <item name="tbMedia"><![CDATA[ Multimedia]]></item>
+  <item name="tbPanelSearchTerm"><![CDATA[ Your search here :]]></item>
+
+
+  <!--Headers -->
+  <item name="hPage"><![CDATA[Page]]></item>
+  <item name="hArticle"><![CDATA[Article]]></item>
+  <item name="hdescription"><![CDATA[Description :]]></item>
+  <item name="untitledarchive"><![CDATA[Untitled Archive]]></item>
+  <item name="securedpage"><![CDATA[Secured Page]]></item>
+  <!--Dialogs-->
+
+  <!-- Download PDF-->
+  <item name="dlgDownloadPDFHeader"><![CDATA[ Download PDF]]></item>
+  <item name="dlgDownloadSubheader"><![CDATA[ Configure PDF Download]]></item>
+  <item name="dlgSavePage"><![CDATA[ Save Page]]></item>
+  <item name="dlgSaveAll"><![CDATA[ Save All as PDF]]></item>
+  <item name="dlgSavePageFrom"><![CDATA[ Save Page From]]></item>
+  <item name="dlgSavePageTo"><![CDATA[ To]]></item>
+  <item name="dlgFileName"><![CDATA[ File Name :]]></item>
+  <item name="dlgFileSize"><![CDATA[ File Size :]]></item>
+  <item name="dlgSystemRequirement"><![CDATA[ System Requirement:]]></item>
+
+  <!-- Settings-->
+  <item name="dlgSettingsHeader"><![CDATA[ Settings :]]></item>
+  <item name="dlgSettingsSubheader"><![CDATA[ Configure Settings]]></item>
+  <item name="dlgShowPageShadow"><![CDATA[ Show Page Shadow]]></item>
+  <item name="dlgShowHotspots"><![CDATA[ Show Hotspots]]></item>
+  <item name="dlgShowTooltips"><![CDATA[ Show Link Tooltips]]></item>
+  <item name="dlgLanguage"><![CDATA[ Language:]]></item>
+  <item name="dlgSlideShowDuration"><![CDATA[ Slide Show Duration:]]></item>
+  <item name="dlgSeconds"><![CDATA[ Seconds]]></item>
+  <item name="dlgSettingsTheme"><![CDATA[ Theme]]></item>
+  <item name="dlgPlayFlippingSound"><![CDATA[ Play Flipping Sound]]></item>
+  <item name="dlgPlaySlideShowEvery"><![CDATA[ Play Slide Show Every]]></item>
+  
+  <!-- Translate -->
+  <item name="dlgTranslateHeader"><![CDATA[ Translate]]></item>
+  <item name="dlgLeftPage"><![CDATA[ Left Page]]></item>
+  <item name="dlgRightPage"><![CDATA[ Right Page]]></item>
+  <item name="dlgSelectLanguage"><![CDATA[ Select Language :]]></item>
+
+  <!-- Print-->
+  <item name="dlgPrintHeader"><![CDATA[ Print :]]></item>
+  <item name="dlgPrintSubheader"><![CDATA[ Configure Print]]></item>
+  <item name="dlgPrint"><![CDATA[ Print]]></item>
+  <item name="dlgPrintCurrentPage"><![CDATA[ Print Current Page]]></item>
+  <item name="dlgPrintFrom"><![CDATA[ Print from]]></item>
+  <item name="dlgPrintTo"><![CDATA[ To]]></item>
+  
+  <item name="dlgPrintLeft"><![CDATA[ Print Left Page]]></item>
+  <item name="dlgPrintRight"><![CDATA[ Print Right Page]]></item>
+  <!-- Bookmarks-->
+  <item name="dlgBookmarkHeader"><![CDATA[ Bookmarks :]]></item>
+  <item name="dlgBookmarkSubheader"><![CDATA[ Configure Bookmarks]]></item>
+  <item name="dlgBookmarkDescription"><![CDATA[ Enter description for this bookmark]]></item>
+  <item name="dlgMangeBookmark"><![CDATA[ Manage Bookmarks]]></item>
+  <item name="dlgMangeLeftPageRadio"><![CDATA[ Add bookmark to left page]]></item>
+  <item name="dlgMangeRightPageRadio"><![CDATA[ Add bookmark to right page]]></item>
+  <item name="dlgBookmarkTextColor"><![CDATA[ Bookmark Text Color:]]></item>
+  <item name="dlgBookmarkColor"><![CDATA[ Bookmark Color:]]></item>
+  <item name="dlgBookmarkTextHeader"><![CDATA[Page]]></item>
+  <item name="dlgBookmarkAdded"><![CDATA[A bookmark is already added to this page!]]></item>
+
+
+  
+  
+  <!-- Email -->
+  <item name="dlgEmailHeader"><![CDATA[ Email]]></item>
+  <item name="dlgEmailSubHeader"><![CDATA[ Configure Email]]></item>
+  <item name="dlgEmailLinkType"><![CDATA[ Select a link:]]></item>
+  <item name="dlgEmailCurrentPage"><![CDATA[ Current Page]]></item>
+  <item name="dlgEmailThisIssue"><![CDATA[ This Issue]]></item>
+  <item name="dlgEmailFromName"><![CDATA[ Your Name]]></item>
+  <item name="dlgEmailToName"><![CDATA[ Receiver Name]]></item>
+  <item name="dlgEmailLeft"><![CDATA[ Left]]></item>
+  <item name="dlgEmailRight"><![CDATA[ Right]]></item>		
+  <item name="dlgEmailSendCC"><![CDATA[ CC Me]]></item>
+
+  <item name="dlgEmailFrom"><![CDATA[ From]]></item>
+  <item name="dlgEmailTo"><![CDATA[ To]]></item>
+  <item name="dlgEmailMultiple"><![CDATA[ Multiple Email Id Separated by Comma]]></item>
+  <item name="dlgEmailSubject"><![CDATA[ Subject]]></item>
+  <item name="dlgEmailMessage"><![CDATA[ Message]]></item>
+
+  <!-- Notes-->
+  <item name="dlgNotesHeader"><![CDATA[Notes:]]></item>
+  <item name="dlgNotesSubheader"><![CDATA[ Configure Notes]]></item>
+  <item name="dlgMangeNotes"><![CDATA[ Manage notes]]></item>
+
+  <!-- Email Clip Dialog -->
+  <item name="dlgImageClipHeader"><![CDATA[Email Crop Image:]]></item>
+  <item name="dlgImageClipSubheader"><![CDATA[Share This Clip:]]></item>
+
+  <!-- Crop-->
+  <item name="dlgCropHeader"><![CDATA[ Crop Preview :]]></item>
+  <item name="dlgCropSubheader"><![CDATA[ Use Crop Image]]></item>
+  <item name="dlgCropHelp"><![CDATA[ Crop Help]]></item>
+  
+    <!-- FullScreen -->
+  <item name="dlgFullScreenTitle"><![CDATA[ FullScreen]]></item>
+  <item name="dlgFullScreenHeader"><![CDATA[ Please note that the following features<br />are not available in full screen mode:<br/><br/><p>]]></item>
+  <item name="dlgFullScreenSearch"><![CDATA[<li>Search</li>]]></item>
+  <item name="dlgFullScreenSend"><![CDATA[<li>Send</li>]]></item>
+  <item name="dlgFullScreenBookmark"><![CDATA[<li>Adding a bookmark</li>]]></item>
+  <item name="dlgFullScreenNote"><![CDATA[<li>Adding a note</li>]]></item>
+  <item name="dlgFullScreenTypingPageNumber"><![CDATA[<li>Typing a Page Number</li>]]></item>
+  <item name="dlgFullScreenConfirm"><![CDATA[</p>Do you want to open in full screen mode?]]></item>
+  <item name="dlgFullScreenInlineHtml"><![CDATA[<li>Showing html on page</li>]]></item>
+  <!-- Help-->
+  <item name="dlgHelpHeader"><![CDATA[ Help :]]></item>
+  <item name="dlgHelpSubheader"><![CDATA[ epaper flip help]]></item>
+
+  <item name="dlgHelpNavigationArrows"><![CDATA[ Navigation Arrows- Click on the internal arrows to turn the pages. Click on the external arrows take you directly to the front cover (first page) or to the back cover (last page).]]></item>
+  <item name="dlgHelpJumpToPage"><![CDATA[ Jump to page- Jump to any page by entering the page number directly in the box then hit "Enter"(or "Return") on your keyboard.]]></item>
+  <item name="dlgHelpFullScreen"><![CDATA[ Full Screen – click for full screen view mode, press ESC to exit full screen mode]]></item>
+  <item name="dlgHelpDownloadPDF"><![CDATA[ Download PDF- Click to download the online edition as a PDF document.]]></item>
+  <item name="dlgHelpCrop"><![CDATA[ Crop- Click to select specific area to crop and send as email]]></item>
+  <item name="dlgHelpPrint"><![CDATA[ Print- Click to print any desired page/s or the entire edition.]]></item>
+  <item name="dlgHelpShare"><![CDATA[ Share –Share your edition/ content everywhere (Facebook, Twitter, etc).]]></item>
+  <item name="dlgHelpTOC"><![CDATA[ TOC- Click to view the table of content page in your edition.]]></item>
+  <item name="dlgHelpSettings"><![CDATA[ Setting- Allows you to modify the setting for your personal view.  Select your desired page viewing, sound option, shadow effect, automatic hotspot highlighting, etc.]]></item>
+  <item name="dlgHelpPrint"><![CDATA[ Print- Click to print any desired page/s or the entire edition.]]></item>
+  <item name="dlgHelpBookmark"><![CDATA[ Bookmark-> Allows you to add bookmarks to your digital edition.]]></item>
+  <item name="dlgHelpNote"><![CDATA[ Note-> Allows you to add notes anywhere on the page. When you wish to view all your notes, simply click on the note icon again.]]></item>
+  <item name="dlgHelpPageMode"><![CDATA[ Page mode- Click to toggle between single and double page view mode.]]></item>
+  <item name="dlgHelpMenu"><![CDATA[ Menu-> under the menu you have several buttons: interactive table of content, Thumbnails button to view a smaller version of all pages simultaneously. Clicking on a thumbnail will open the selected page. Multimedia button to view videos and audio in your edition if any.]]></item>
+  <item name="dlgHelpSearch"><![CDATA[ Search-Enter your phrase or any word in the search box, and then click "GO". You can improve your search by adding an asterisk (*) after a word, our search engine will pull up results with all variations of the word. Example: Search* our search engine will pull up pages with the words searches, searching, searchable, etc. By replacing a letter with a word with a question mark (?), our search engine will pull up pages that include any character in that position. Example: b?g , our search engine will pull up pages with the words big, beg, bag, etc. clicking on the search result page thumbnail will take you directly to that page in the edition and your search will be highlighted on the page.]]></item>
+
+  <!--Buttons -->
+  <item name="btnHelp"><![CDATA[ Help]]></item>
+  <item name="btnDownload"><![CDATA[ Download]]></item>
+  <item name="btnPrint"><![CDATA[ Print]]></item>
+  <item name="btnOk"><![CDATA[ OK]]></item>
+  <item name="btnCancel"><![CDATA[ Cancel]]></item>
+  <item name="btnClose"><![CDATA[ Close]]></item>
+  <item name="btnAddBookmark"><![CDATA[ Add New Bookmark]]></item>
+  <item name="btnDeleteAllBookmark"><![CDATA[ Delete All Bookmarks]]></item>
+  <item name="btnAddNewNotes"><![CDATA[ Add New Notes]]></item>
+  <item name="btnDeleteAllNotes"><![CDATA[ Delete all notes]]></item>
+  <item name="btnEmailSend"><![CDATA[ Send]]></item>
+  <item name="btnUse"><![CDATA[ Use]]></item>
+  <item name="btnTranslate"><![CDATA[ Translate]]></item>
+  <item name="btnAddItem"><![CDATA[Add Item]]></item>
+  <item name="btnCheckout"><![CDATA[Checkout]]></item>
+
+  <!-- ECommerce -->
+  <item name="dlgProductCheckoutHeader"><![CDATA[Products:]]></item>
+  <item name="dlgAddProductHeader"><![CDATA[Add Items:]]></item>
+  <item name="dlgSKUHeader"><![CDATA[SKU]]></item>
+  <item name="dlgQuantityHeader"><![CDATA[Quantity]]></item>
+
+  
+  <!--Search Panel -->
+  <item name="noresultfound"><![CDATA[ No Result Found!]]></item> 
+  <!--IHDP Mode-->
+  <item name="featurenotenabled"><![CDATA[ This feature is in not enabled in desktop mode]]></item>
+  
+  <item name="dlgLoginTitle"><![CDATA[ Login]]></item>
+  <item name="dlgLoginPassword"><![CDATA[ Password]]></item>
+  <item name="dlgLoginFailed"><![CDATA[ Login Failed !]]></item>
+  <item name="dlgLoginLoginButton"><![CDATA[ Login]]></item> 
+  <item name="dlgLoginSecurityInfoText"><![CDATA[ This page is secured. Please Login to view this page.]]></item>
+  
+  <item name="dlgSecurityPromptText"><![CDATA[ This book is secured and following pages are unsecured.]]></item>
+  <item name="dlgSecurityPromptAllSecureText"><![CDATA[ This book is secured and None of the pages are unsecured.]]></item>
+  <item name="ttMusicButtonText"><![CDATA[ Mute/Unmute]]></item>
+  <item name="dlgSecurityInfoText"><![CDATA[ Security Info ]]></item>
+
+</locale>
+</GetLanguageResult>

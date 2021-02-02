@@ -1,0 +1,170 @@
+
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>Thumbs</title>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+<script type="text/javascript" src="js/info.js"></script>
+<script>
+function querySt(ji)
+	 {
+	hu = window.location.search.substring(1);
+
+	gy = hu.split("&");
+	for (i=0;i<gy.length;i++) {
+	ft = gy[i].split("=");
+	if (ft[0] == ji) {
+	return ft[1];
+					}
+				}
+	}
+$(document).ready(function(){
+ 	check_settings();
+});
+</script>
+<style>
+
+div.circle {
+
+	background: #222222;
+
+	width: 1.6em;
+
+	height: 1.6em;
+
+	-moz-border-radius: 5em;
+
+	-webkit-border-radius: 5em;
+
+	border-radius: 5em;
+
+	
+
+	border:2px solid #B26D64;
+
+} 
+
+.circle p {
+
+      font-size:10pt;
+
+	margin-top: .3em;
+
+	  text-align:center;
+
+}
+.ui-corner-left {
+    border-bottom-left-radius: 0em;
+    border-top-left-radius: 0em;
+}
+
+.ui-corner-right {
+    border-bottom-right-radius: 0em;
+    border-top-right-radius: 0em;
+}
+.ui-corner-bottom {
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+.ui-corner-top {
+    border-top-left-radius: 0em;
+    border-top-right-radius: 0em;
+}
+.ui-btn-inner {
+   
+	border: 0px;
+}
+.ui-btn-up-a {
+ /*background: #111 linear-gradient(#3c3c3c, #111) repeat scroll 0 0;*/
+ background: #f6f6f6 linear-gradient(#f6f6f6, #f6f6f6) repeat scroll 0 0;
+ border:  0px;
+ color: #000000;
+ text-shadow: none;
+}
+.ui-bar-a {
+  text-shadow: none;
+  /*background: #111 linear-gradient(#3c3c3c, #111) repeat scroll 0 0;*/
+ background: #f6f6f6 linear-gradient(#f6f6f6, #f6f6f6) repeat scroll 0 0;
+}
+
+</style>    
+
+</head>
+
+
+
+<body>
+
+<div data-role="page">
+
+<style>
+
+#chat .ui-icon { background:  url(images/book2.png) 50% 50% no-repeat; background-size: 18px 18px; }
+
+
+
+#print .ui-icon { background:  url(images/print.png) 50% 50% no-repeat; background-size: 18px 18px; }
+</style>
+
+	<div data-role="header">
+       	  
+  <div data-role="controlgroup" data-type="horizontal" style="text-align:center; margin-top:2px; padding-top:0; margin-bottom:2px; padding-bottom:0; ">
+
+                     <a href="index.html" rel="external" data-role="button" data-icon="home" data-iconpos="top" style="width:16%; height:45px; font-size:x-small; ">Home</a>
+       <a href="thumb.html" rel="external" data-role="button" data-icon="grid" data-iconpos="top" style=" height:45px; font-size:x-small; width:21%;">Thumbnail</a> 
+<a href="share.html" data-role="button" data-icon="forward" rel="external" id="share" data-iconpos="top" style=" height:45px; font-size:x-small; width:16%;">Share</a>
+<a href="search.html" data-role="button" data-icon="search" data-iconpos="top" rel="external" style=" height:45px; font-size:x-small; width:16%;">Search</a>
+<a href="" id="download" data-role="button" data-icon="custom" data-iconpos="top" rel="external" style=" height:45px; font-size:x-small; width:20%;" target="_blank">Download</a>
+</div> 
+       
+	</div><!-- /header -->
+
+
+
+	<div data-role="content" class="ui-body-a">	
+    <script>
+		
+		for (i=1;i<=number_of_pages;++i)
+			document.write("<div class='ui-block-a' style='padding:10px;'> <a href='index.html?id="+i+"' rel='external' > <img border='0' width='130'  src='"+base_url+"Thumbnail_"+(i)+".jpg' /></a><div class='circle' style='margin-top:-30px;  position:relative; '><p>"+(i)+"</p></div></div><div class='ui-block-a'>&nbsp;&nbsp;&nbsp;</div>");
+	</script>
+
+	   
+
+        
+        
+	     </div><!-- /content -->
+
+
+
+
+	<div data-role="footer">
+
+	  
+  <div data-role="controlgroup" data-type="horizontal" style="text-align:center; margin-top:2px; padding-top:0; margin-bottom:2px; padding-bottom:0; ">
+  <?php require_once('footer.php'); ?>
+</div> 
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+<script type="text/javascript" src="js/footer.js"></script>
+
+</body>
+
+</html>
+

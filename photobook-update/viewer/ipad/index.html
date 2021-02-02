@@ -1,0 +1,540 @@
+<!DOCTYPE html >
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<title></title>
+<!--<meta name="viewport" />-->
+<!--<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />-->
+<meta name="viewport" content="width=1024, height=768, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta charset="UTF-8" />
+<link href='css/style.css' rel='stylesheet' type='text/css' media="screen">
+<link rel="stylesheet" href="css/sharedialague.css" media="screen" />
+<link rel="stylesheet" href="css/search.css" media="screen" />
+<link rel="stylesheet" href="css/printelem.css" media="screen" />
+<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="../../scripts/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
+<script type="text/javascript" src="../../scripts/jquery.fancybox.js?v=2.0.6"></script>
+<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="extras/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../../mobile/js/info.js"></script>
+<script type="text/javascript" src="lib/hash.js"></script>
+<script type="text/javascript" src="js/controls.js"></script>
+<script type="text/javascript" src="js/jquery.printElement.min.js"></script>
+<script type="text/javascript" src="js/jquery.timer.js"></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.js"></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="js/jwplayer.js"></script>
+<script type="text/javascript" src="js/jwplayer.html5.js"></script>
+<script type="text/javascript" src="../../scripts/ga.js"></script>
+<script type="text/javascript" src="../../scripts/GAStatistics.js"></script>
+<script type="text/JavaScript" src="js/jquery.dop.ThumbnailScroller.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.dop.ThumbnailScroller.css" />
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<link rel="stylesheet" href="css/jquery.touchpanview.css">
+<script type="text/javascript" src="js/jquery.touchpanview.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/jquery.jgestures.js"></script>
+<script type="text/javascript" src="js/jquery.touchy.js"></script>
+<script type="text/javascript" src="js/scrollfix.js"></script>
+<script type="text/javascript">
+	function callGAServer(sGAAccount,sURL)
+	{
+		var firstTracker = _gat._getTracker(sGAAccount); 
+		firstTracker._initData(); 
+		firstTracker._trackPageview(sURL);
+	}
+
+	$(function(){
+		$('#btnShareSend').click(function(){
+			
+			var user_name = $('#user_name').val();
+			var email_from = $('#email_from').val();
+			var emailTo = $('#emailTo').val();
+			var receiver_name = $('#receiver_name').val();
+			var email_subject = $('#email_subject').val();
+			var email_message = $('#email_message').val();
+			var msg = "";
+			if(user_name != "" && email_from != "" && emailTo != "" && receiver_name != "" && email_subject != "")
+			{
+				
+				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				
+				if (!filter.test(email_from)) {
+					msg += 'Please enter a valid sender email address \n';
+				}
+				var emailToArr = emailTo.split(',');
+				if(emailToArr.length > 0)
+				{
+					for(var i = 0; i < emailToArr.length; i++)
+					{
+						if (!filter.test(emailToArr[i].toString())) {
+							msg += 'Please enter a valid recipient email address \n';
+						}
+					}
+				}
+				else
+				{
+					if (!filter.test(emailTo)) {
+						msg += 'Please enter a valid recipient email address \n';
+					}
+				}
+				if (email_subject == "") {
+					msg += 'Please enter a valid email subject \n';
+				}
+				if(msg != "")
+				{
+					alert(msg);
+					return false;
+				}
+				else
+				{
+					var messagetxt = email_message;
+					
+					var pageNum = $('.magazine').turn('page');
+					if(pageNum == 1)
+						pageNum = 1;
+					else if(pageNum == totalpage)
+						pageNum = totalpage;
+					else if(document.getElementById('RightPage').checked)
+						pageNum = pageNum+1;
+						
+					
+					var thumburl = documentUrl+documentID+'/Thumbnail_'+pageNum+'.jpg';
+					var pageurl = window.location.href;
+					$.ajax({
+						url: 'http://share.inhousedigitalpublishing.com/sendemail.php' , 
+						type: 'POST',
+						data: {user_name:  user_name,  email_from: email_from, emailTo: emailTo, receiver_name: receiver_name, email_subject:  email_subject, email_message: messagetxt, thumburl:thumburl, pageurl:pageurl},
+						success: function(result){     
+							alert("Your email has been successfully sent.");
+							    
+						}
+					});   
+					return false;
+				}
+			}
+			else
+			{
+				msg += 'Please enter a valid sender email address \n';
+				msg += 'Please enter a valid recipient email address \n';
+				msg += 'Please enter a valid email subject \n';
+				alert(msg);
+				return false;
+			}
+			
+		});
+	});
+	
+	var scrollingContent = document.getElementById("search-item-container");
+    new ScrollFix(scrollingContent);
+	</script>
+<script src="js/screenfull.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript">
+$(document).ready(function() {
+$("a.overlay-flash").fancybox({
+		maxWidth : _popupwidth,
+		maxHeight : _popupheight,
+		fitToView : false,
+		autoSize : false,
+		closeClick : false,
+		openEffect : 'none',
+		closeEffect : 'none',
+		scrolling: 'auto',
+		closeBtn: true,
+		type: 'iframe',
+		beforeLoad : function() {                    
+			this.width = _popupwidth;  
+			this.height = _popupheight;
+		}
+	});
+});
+function openHtmlPopup(url,width,height){
+    _popupwidth = typeof width !== 'undefined' ? width : 565;
+    _popupheight = typeof height !== 'undefined' ? height : 325;
+ 
+	_popupwidth = typeof width !== 'undefined' ? width : 565;
+	_popupheight = typeof height !== 'undefined' ? height : 325;
+	var j1 = document.getElementById("hiddenclicker");
+	j1.href = url;
+	$('#hiddenclicker').trigger('click');
+}
+</script>
+</head>
+<body onload="DetectBrowser()">
+	<div id="all" style="display: none; visibility:hidden;">
+		<div id="canvas">
+			<div class="zoom-icon zoom-icon-in">
+			</div>
+			<div class="magazine-viewport">
+				<div id="containerbg" class="container-bg" style="margin-top:44px;" align="left">
+					
+				</div>
+				<div id="toolbarHeader" class="toolbar-header">
+					<div id="divlogo" class="div-logo">
+					</div>
+					<div id="divcontrols" class="div-controls" align="center" style="overflow:hidden; width:60%;height:100%;margin:0 auto;" >
+						<div id="box-wrap-inner" data-flexie-id="1" data-flexie-parent="true" style="-moz-box-orient: horizontal; -moz-box-align: center; -moz-box-direction: normal; -moz-box-pack: center; "  align="center">
+							<div id="box-1" class="box-1" data-flexie-id="2" style="-moz-box-ordinal-group: 1; -moz-box-flex: 0;"  align="center">
+							</div>	
+						</div>
+					</div>
+					<div id="divsearch" class="div-search" style="visibility:hidden;">
+
+					</div>
+				</div>
+				<div id="containerintro" class="container-intro" style="" align="center">
+					
+				</div>
+				<!--<div id="toolbarFooter" class="toolbar-footer" align="center">
+				</div>-->
+				<div class="container">
+					<div class="magazine">
+						<!-- Next button -->
+						<div ignore="1" class="next-button"></div>
+						<!-- Previous button -->
+						<div ignore="1" class="previous-button"></div>
+					</div>
+				</div>
+				<div id="containerzoom" class="container-zoom" style="visibility:hidden; display:none; width:100%; height:100%;  overflow:scroll;" align="center">
+					<div id="demo1">
+						<div id="status" align="center">
+							<img id="imgPage11" src="pics/zoomloader.gif" style="" />
+						</div>
+						<div id="image-container1" style="visibility:hidden; display:none;" ></div>
+					</div>
+					<img id="zoomPage" class="defferred" width="0" height="0" src="" data-src="" style="visibility:hidden; border:0px solid black;" />
+				</div>
+				<div id="containerzoom2" class="container-zoom2" style="visibility:hidden; display:none; width:100%; height:100%;  overflow:scroll;" align="center">
+					<div id="demo2">
+						<div id="status2" align="center">
+							<img id="imgPage12" src="pics/zoomloader.gif" style="" />
+						</div>
+						<div id="image-container2" style="visibility:hidden; display:none;" ></div>
+					</div>
+					<img id="zoomPage2" class="defferred" width="0" height="0" src="" data-src="" style="visibility:hidden; border:0px solid black;" />
+				</div>
+
+				<div id="containersinglenavigation" class="container-navigation" style="visibility:hidden; display:none; " align="center">
+					<div id="divthumbnailsprev1" class="div-thumbnails-buttons12" style="position: relative; z-index: 1000; background-position: 0px 0px; cursor: pointer; background-repeat: no-repeat; float: left; height: 48px; width: 32px; background-image: url('pics/thumbprev.png'); " >
+					</div>
+					<div id="divpagearea" class="div-page-area" style="float: left; " >
+					</div>
+					<div id="divthumbnailsnext1" class="div-thumbnails-buttons12" style="position: relative; z-index: 1000; background-position: 0px 0px; cursor: pointer; background-repeat: no-repeat; float: left; height: 48px; width: 32px; background-image: url('pics/thumbnext.png'); " >
+					</div>
+				</div>
+				<div id="containerthumbnails" class="container-thumbnails" style="visibility:hidden; display:none; margin-top:54px;" align="center">
+					<div style="width:220px; height:32px; ">
+						<div class="title-text" align="center">Thumbnails</div>
+						<img id="imgCloseThumbnailsContainer" style="width:100%; padding-left:190px; padding-top:3px; height:24px; width:24px;"  class="" src="pics/closepopup.png" ></img>
+					</div>
+					<div class="horizontalRule" align="center"></div>
+					<div id="thumbGrid" class="thumb-Grid" align="center"></div>
+				</div>
+				
+				<div id="containerprint" class="container-print" style="visibility:hidden; display:none; " align="center">
+					<div style="width:98%; height:32px; " >
+						<div class="title-text-translate" align="left" style="float: left; padding-left:5px; padding-top:5px;">Print</div>
+						<img id="imgClosePrintContainer" style="float: right;  cursor: pointer; padding-top:0px; padding-right:2px; height:24px; width:24px;" class="" src="pics/closepopup.png" ></img>
+					</div>
+					<div class="horizontalRuleTranslate" align="center" style="width=100%"></div>
+					<div style="">
+						<div id="doublepageselectiondiv" align="center" style="float:left; padding-top:20px; padding-left:16px; width:95%; height:20px;">
+							<div align="center" style="float:left;  width:40%; height:100%">
+								<input type="radio" name="PrintPage" id="LeftPrintPage" value="LeftPrintPage" checked="true" style="float:left;">
+								<label id="LeftPrintPageText" for="LeftPrintPage" style="float:left; padding-left:5px; font:normal 12px arial;">Print Left Page</label> 
+							</div>
+						</div>
+						<div id="doublepageselectiondiv2" align="center" style="float:left; padding-top:15px; padding-left:16px; width:95%; height:35px;">
+							<div align="center" style="float:left;  width:40%; height:100%">
+								<input type="radio" name="PrintPage" id="RightPrintPage" value="RightPrintPage" style="float:left;">
+								<label for="RightPrintPage" style="float:left; padding-left:5px; font:normal 12px arial;">Print Right Page</label> 
+							</div>
+						</div>
+						<div style="float:left;  width:100%; height:90px;">
+							<div align="center" style="float:left;  width:25%; height:100%; padding-left:16px; ">
+								<input type="radio" name="PrintPage" id="PageRange" value="PageRange" style="float:left;">
+								<label for="RightPage" style="float:left; padding-left:5px; font:normal 13px arial;">Print From : </label> 
+							</div>
+							<div id="dropdownListRange1" align="center" style="float:left;  width:25%; height:100%">
+							</div>
+							<div align="center" style="float:left;  width:10%; height:100%">
+								<label style="font:normal 13px arial;"> To </label>
+							</div>
+							<div id="dropdownListRange2" align="center" style="float:left;  width:25%; height:100%">
+							</div>
+						</div>
+						<div id="thumbGridPrintFooter" class="thumb-Grid-print-footer" align="center" style="float:left; width:100%; height:40%">
+							<input id="btnPrint" type="submit" name="button" value="Print">
+							<input id="btnCancelPrint" type="submit" name="button" value="Cancel">
+						</div>
+					</div>		
+				</div>
+				
+				<div id="containertranslate" class="container-translate-popup" style="visibility:hidden; display:none; " align="center">
+					<div style="width:100%; height:32px;" >
+						<div class="title-text-translate" align="left" style="float: left; padding-left:5px; padding-top:5px;">Translate</div>
+						<img id="imgCloseTranslateContainer" style="float: right;  cursor: pointer; padding-top:0px; padding-right:2px; height:24px; width:24px;" class="" src="pics/closepopup.png" ></img>
+					</div>
+					<div class="horizontalRuleTranslate" align="center" style="width=100%"></div>
+					<div style="">
+						<div id="doublepageselectiondiv" align="center" style="float:left; padding-top:20px; padding-left:16px; width:95%; height:40px;">
+							<div id="leftPageTranslateDiv" align="center" style="float:left;  width:40%; height:100%">
+								<input type="radio" name="Page" id="LeftPage" value="LeftPage" style="float:left;">
+								<label id="LeftTranslatePageText" for="LeftPage" style="float:left; padding-left:5px; font:normal 13px arial;">Left Page</label> 
+							</div>
+							<div id="rightPageTranslateDiv" align="center" style="float:left;  width:40%; height:100%">
+								<input type="radio" name="Page" id="RightPage" value="RightPage" style="float:left;">
+								<label id="RightTranslatePageText" for="RightPage" style="float:left; padding-left:5px; font:normal 13px arial;">Right Page</label> 
+							</div>
+						</div>
+						<div style="float:left;  width:100%; height:70px;">
+							<div align="center" style="float:left;  width:50%; height:100%">
+								<label style="font:normal 13px arial;">Select Language : </label>
+							</div>
+							<div id="dropdownListLanguageDiv" align="left" style="float:left;  width:50%; height:100%">
+							</div>
+						</div>
+						<div id="thumbGridPrintFooter" class="thumb-Grid-print-footer" align="center" style="float:left; width:100%; height:40%">
+							<input id="btnTranslate" type="submit" name="button" value="Translate">
+							<input id="btnCancelTranslate" type="submit" name="button" value="Cancel">
+						</div>
+					</div>		
+				</div>
+				
+				<div id="containersettings" class="container-settings-popup" style="visibility:hidden; display:none; " align="center">
+					<div style="width:98%; height:32px; " >
+						<div class="title-text-translate" align="left" style="float: left; padding-left:5px; padding-top:5px;">Settings</div>
+						<img id="imgCloseSettingsContainer" style="float: right;  cursor: pointer; padding-top:0px; padding-right:2px; height:24px; width:24px;" class="" src="pics/closepopup.png" ></img>
+					</div>
+					<div class="horizontalRuleTranslate" align="center" style="width=100%"></div>
+					<div style="">
+						<div id="settingsitemdiv" align="center" style="float:left; padding-top:10px; padding-left:10px; width:95%; height:120px;">
+							<div class="SettingsDialogText" align="left" style="float:left;  width:100%; height:25px"><input id="pageshadow" type="checkbox" class="SettingsDialogOptions" name="pageshadow" value="pageshadow" ><label style="color:#000; padding-left:5px;">Show Page Shadow</label></div>
+							<div class="SettingsDialogText" align="left" style="float:left;  width:100%; height:25px"><input id="flippingsound" type="checkbox" class="SettingsDialogOptions" name="flippingsound" value="flippingsound" ><label style="color:#000; padding-left:5px;">Play Flipping Sound</label></div>
+							<div class="SettingsDialogText" align="left" style="float:left;  width:100%; height:25px"><input id="showlinkstooltip" type="checkbox" class="SettingsDialogOptions" name="showlinkstooltip" value="showlinkstooltip" ><label style="color:#000; padding-left:5px;">Show Links Tooltip</label></div>
+							<div class="SettingsDialogText" align="left" style="float:left;  width:100%; height:25px"><input id="playslideshow" type="checkbox" class="SettingsDialogOptions" name="playslideshow" value="playslideshow" ><label style="color:#000; padding-left:5px;">Play Slide Show Every</label>
+								<div id="dropdownListflippingTimerDiv" align="left" style=" float:right; width:40%; height:25px"></div>
+							</div>
+						</div>
+						<div id="thumbGridPrintFooter" class="thumb-Grid-print-footer" align="center" style="float:left; width:100%; height:40%">
+							<input id="btnSettingsOk" type="submit" name="button" value="Ok">
+							<input id="btnCancelSettings" type="submit" name="button" value="Cancel">
+						</div>
+					</div>		
+				</div>
+				<div id="containerdownloadpdf" class="container-downloadpdf-popup" style="visibility:hidden; display:none; " align="center">
+					<div style="width:98%; height:32px; " >
+						<div class="title-text-translate" align="left" style="float: left; padding-left:5px; padding-top:5px;">Download PDF</div>
+						<img id="imgCloseDownloadpdfContainer" style="float: right;  cursor: pointer; padding-top:0px; padding-right:2px; height:24px; width:24px;" class="" src="pics/closepopup.png" ></img>
+					</div>
+					<div class="horizontalRuleTranslate" align="center" style="width=100%"></div>
+					<div style="">
+						<div id="settingsitemdiv" align="center" style="float:left; padding-top:10px; padding-left:10px; width:95%; height:120px;">
+							<div class="DownloadPdfText" align="left" style="float:left;  width:100%; height:25px"><label style="color:#000; padding-left:5px;">File Name : </label><label id="pdfnametext" style="color:#478fdd; padding-left:5px;"></label></div>
+							<div class="DownloadPdfText" align="left" style="float:left;  width:100%; height:25px"><label style="color:#000; padding-left:5px;">File Size : </label><label id="pdffilesize" style="color:#478fdd; padding-left:5px;"></label></div>
+							<div class="DownloadPdfText" align="left" style="float:left;  width:100%; height:25px"><label style="color:#000; padding-left:5px;">System Requirement : </label><label id="pdfsystemrequirement" style="color:#478fdd; padding-left:5px;"></label></div>
+						</div>
+						
+						<div id="thumbGridPrintFooter" class="thumb-Grid-print-footer" align="center" style="float:left; width:100%; height:40%">
+							<input id="btnDownload" type="submit" name="button" value="Download">
+							<input id="btnCancelDownload" type="submit" name="button" value="Cancel">
+						</div>
+					</div>		
+				</div>
+				<div id="containershare" class="container-share-popup" style="visibility:hidden; display:none; " align="center">
+					<div  class="outer_div" align="center">
+						<div class="container_div">
+							<div style="width:98%; height:32px; " >
+								<div class="title-text-translate" align="left" style="float: left; padding-left:5px; padding-top:5px;">Share</div>
+								<img id="imgCloseShareContainer" style="float: right;  cursor: pointer; padding-top:0px; padding-right:2px; height:24px; width:24px;" class="" src="pics/closepopup.png" ></img>
+							</div>
+							<div id="containertab" style="">
+								<div class="tab-container">
+									<div id="emailtab" class="email-tab" style="overflow:hidden; float:left;" align="center">
+										<label style=" line-height:25px; cursor: pointer;">Email </label>
+									</div>			
+									<div id="sharetab" class="share-tab" style="overflow:hidden; margin-left:1px;" align="center">
+										<label style=" line-height:25px; cursor: pointer;">Share </label>
+									</div>	
+								</div>
+								<div class="content-container" style=" width:100%; height:325px; overflow:hidden;">
+									<div class="tab-content" id="email_div">
+										<form id="emailform" name="emailform" method="post" >
+											<div id="select_page_share_div" class="form_div" style="padding-top:20px;padding-left:138px;">
+											<input type="radio" name="Page" id="LeftPage" value="LeftPage" style="float:left;" selected="true">
+											<label style="font:normal 12px arial; color:#000000;float:left;padding-top:3px;">Left Page </label>
+											<input type="radio" name="Page" id="RightPage" value="RightPage" style="float:left;">
+											<label style="font:normal 12px arial; color:#000000;float:left;padding-top:3px;">Right Page</label>
+											</div>
+											<div class="form_div" style="padding-top:40px">
+												<div class="label_div">Your Name</div>
+												<div class="text_div">
+													<label for="user_name" style="font:normal 12px arial; color:#ffffff;">* </label><input style="email_input" type="text" id="user_name" name="user_name"/>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="label_div">From</div>
+												<div class="text_div">
+													<label for="email_from" style="font:normal 12px arial; color:#ff0000;">* </label><input style="email_input" type="text" id="email_from" name="email_from"/>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="label_div">CC Me</div>
+												<div class="text_div" align="left" style="padding-right:265px;">
+													<label for="ccm" style="font:normal 12px arial; color:#ffffff;">* </label><input align="left" type="checkbox" id="ccm" name="ccm"/>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="label_div">Receiver Name</div>
+												<div class="text_div">
+													<label for="receiver_name" style="font:normal 12px arial; color:#ffffff;">* </label><input style="email_input" type="text" id="receiver_name" name="receiver_name"/>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="label_div">To</div>
+												<div class="text_div">
+													<label for="emailTo" style="font:normal 12px arial; color:#ff0000;">* </label><input style="email_input" type="text" id="emailTo" name="emailTo"/>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="text_div" align="left" style=" padding-right: 90px;  padding-left: 130px;">
+													<label style="font:normal 12px arial; color:#ffffff;">* </label><label style="font:normal 11px arial; color:#000;">Multiple Email Id Separated by Comma </label>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="label_div">Subject</div>
+												<div class="text_div">
+													<label for="email_subject" style="font:normal 12px arial; color:#ff0000;">* </label><input style="email_input" type="text" id="email_subject" name="email_subject"/>
+												</div>
+											</div>
+											<div class="form_div">
+												<div class="label_div">Message</div>
+												<div class="text_div">
+													<label for="email_message" style="font:normal 12px arial; color:#ffffff;">* </label><textarea style="email_input" rows="2" cols="15" id="email_message" name="email_message"></textarea>
+												</div>
+											</div>
+											<div id="thumbGridShare" class="thumb-Grid-Share-footer" align="center" style="float:left; margin-top: 53px; width:100%;">
+												<input id="btnShareSend" type="submit" name="button" value="Send">
+											</div>
+										</form>
+									</div>
+									<div class="tab-content" id="share_div" align="center">
+									</div>
+								</div>
+								<!--<div id="thumbGridShare2" class="thumb-Grid-Share-footer" align="center" style="float:left; padding-top: 10px; width:100%;">
+									<input id="btnShareSend2" type="submit" name="button" value="Send">
+									<input id="btnCancelShare2" type="submit" name="button" value="Cancel">
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="containerslideshow" class="container-slideshow-popup" style="visibility:hidden; " align="center">
+					<div style="width:100%; height:100%; padding-top:3px;" >
+						<div class="slideshow-controls" align="left" style="float: left; padding-left:3px; padding-top:3px;">
+						<span class="tooltip_bottom" data-tooltip="Front Cover"><img id="imgSlideshowFirst" class="slideshow-control-img" src="pics/slideshow_first.png" ></img></span>
+						</div>
+						<div class="slideshow-controls" align="left" style="float: left; padding-left:3px; padding-top:3px;">
+							<span class="tooltip_bottom" data-tooltip="Previous Page"><img id="imgSlideshowPrevious" class="slideshow-control-img" src="pics/slideshow_previous.png" ></img></span>
+						</div>
+						<div class="slideshow-controls" align="left" style="float: left; padding-left:3px; padding-top:3px;">
+							<span id="tooltip_playmode"class="tooltip_bottom" data-tooltip="Play"><img id="imgSlideshowPlay" class="slideshow-control-img" src="pics/slideshow_play.png" ></img></span>
+						</div>
+						<div class="slideshow-controls" align="left" style="float: left; padding-left:3px; padding-top:3px;">
+							<span class="tooltip_bottom" data-tooltip="Next Page"><img id="imgSlideshowNext" class="slideshow-control-img" src="pics/slideshow_next.png" ></img></span>
+						</div>
+						<div class="slideshow-controls" align="left" style="float: left; padding-left:3px; padding-top:3px;">
+							<span class="tooltip_bottom" data-tooltip="Last Page"><img id="imgSlideshowLast" class="slideshow-control-img" src="pics/slideshow_last.png" ></img></span>
+						</div>
+						<div class="slideshow-controls" align="left" style="float: left; padding-left:45px; padding-top:1px;">
+						<span class="tooltip_bottom" data-tooltip="Close"><img id="imgCloseSlideshowContainer" class="" style="height:24px; width:24px; cursor:pointer;" src="pics/closepopup.png" ></img></span>
+						</div>
+						
+					</div>
+				</div>
+				<!--Image Popup-->
+				<div id="containerimagepopup" class="container-image-popup" style="visibility:hidden; display:none;" align="center">
+					
+				</div>
+				<div id="audio-container" style="visibility:hidden; display:none;">
+					<div id="demo">
+						<div id="image-container"></div>
+					</div>
+					<div id="hidden_clicker2" style="display:none;">
+							<a class="overlay-flash1" id="hiddenclicker2" href="#" >Hidden Clicker2</a>
+					</div>
+				</div>
+				<div id="containersearch" class="container-search-popup" style="visibility:hidden; display:none; background: none repeat scroll 0 0 #CCC;" align="center">
+					<div   id ="outer_div_search" class="outer_div_search" align="center" style="" >
+						<div class="container_div_search" >
+							<div id="search_header_div" style="width:98%; height:32px; " >
+								<div class="title-text-translate" align="left" style="float: left; padding-left:5px; padding-top:5px;">
+									<label style="font:20px arial,sans-serif;font-weight:bold;">Search</label>
+								</div>
+								<img id="imgCloseSearchContainer" style="float: right; width:20%; height:32px; cursor: pointer; padding-top:0px; padding-right:2px; height:24px; width:24px;" class="" src="pics/closepopup.png" ></img>
+							</div>
+							<div class="horizontalRuleTranslate" align="center" style="width=100%"></div>
+							<div id="search_dialague_div" style="width:100%;height:40px;">
+								<div id="search_input_div" style="width:100%;">
+									<div class="text_div1" style="float:left;padding-top:7px;padding-left:12px; padding-right:5";>
+										<label class="text_span">Your Search here : </label>
+									</div>
+									<div class="div-search-input" id="divsearchinput" align="">
+										<input type="text" id="searchinputpopup" class="search-input-rounded" value="" style=""/>
+									</div>
+									<div class="div-search-button" id="divsearchbutton" align="">
+										<img id="imgSearch" SRC="pics/search_button.png" style=" margin: 0 0 0px 0px; cursor: pointer; "   border="0" alt="search" onclick="SearchText()"/>
+									</div>
+								</div>	
+							</div>
+							<div class="horizontalRuleTranslate" align="center" style="width=100%"></div>
+						</div>
+						<div id="search-item-container" class="scrollable" >
+
+						</div>
+						
+					</div>
+				</div>
+				<div id="containertoc" class="container-toc" style="visibility:visible; display:block;overflow-x:hidden; overflow-y:hidden;  margin-top:0px; z-index:9999;" align="center">
+					<div id="page-wrap" class="progress-bar-wrap">
+						<div >
+							<img id="imgTumbnailPreloader" class="" style="" src="" ></img>
+						</div>
+						<div class="meter111">
+							<label id="textLoadingTumbnailPreloader" style="width: 100%"> Loading ... </label>
+						</div>
+					</div>
+				</div>
+				<!-- Thumbnails -->
+				<div id="containerthumbnails" class="container-thumbnails-popup" style="visibility:hidden; display:none; overflow-x:hidden; overflow-y:hidden;" align="center">
+					<div id="scrollerContainer4"></div>
+				</div>
+				<div id="hidden_clicker" style="display:none;">
+						<a class="overlay-flash" id="hiddenclicker" href="#" >Hidden Clicker</a>
+				</div>
+				<div id="containeroverlay" class="container-overlay" style="visibility:hidden; display:none;" align="center">
+					
+				</div>
+			</div>
+			
+			</div>
+		
+		<script type="text/javascript">
+
+
+
+		</script>
+	</body>
+</html>
+</body>
+</html>

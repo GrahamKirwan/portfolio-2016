@@ -1,0 +1,77 @@
+<viewersettings>
+  <appsettings>
+    <skin file="BlueTheme.swf" buttonstheme="square.swf" buttonscolor="39372" dynamicbtncolor="1"/>
+    <header height="44"/>
+    <backgroundimage imagedisplaymode="0" horzoffset="0" verticaloffset="0" file=""/>
+    <zoom zoomfactor="2" maxzoomfactor="5" autohidezoom="1" onetimezoom="0"/>
+    <logo file="" url=""/>
+    <enableprint>1</enableprint>
+    <enablesound>1</enablesound>
+    <enabledownload>1</enabledownload>
+    <hardcovers>0</hardcovers>
+    <enablesend>1</enablesend>
+    <enablesearch>1</enablesearch>
+    <enablebookmarks>1</enablebookmarks>
+    <enablenotes>1</enablenotes>
+    <enablethumnails>1</enablethumnails>
+    <enablehelp>1</enablehelp>
+    <enablepagemode>1</enablepagemode>
+    <enablearchive>1</enablearchive>
+    <enablewishlist>0</enablewishlist>
+    <enableecommerce>0</enableecommerce>
+    <enablecrop>1</enablecrop>
+    <enablesettings>1</enablesettings>
+    <enbalefullscreen>1</enbalefullscreen>
+    <alwaysshowfullscreenmessage>1</alwaysshowfullscreenmessage>
+    <cachesize>3</cachesize>
+    <showpagesshadow>1</showpagesshadow>
+    <enabletranslate>1</enabletranslate>
+    <helpurl>http://www.inhousedigitalpublishing.com/viewerhelp/index.php</helpurl>
+    <Showtooltips>1</Showtooltips>
+    <gaaccount enable="1"/>
+    <enableseo>1</enableseo>
+    <showmagnifier>0</showmagnifier>
+    <tooltip fontsize="10" fontweight="bold" bgcolor="yellow"/>
+    <thumbnails thumbwidth="0" thumbheight="0" boarderwidth="0" boardercolor="0"/>
+    <language>en-us</language>
+    <footer text="Powered by IHDP Software" url="http://www.inhousedigitalpublishing.com" color="333333" show="1" enable="1"/>
+    <background startcolor="99ccff" endcolor="333333" gradienttype="linear" isgradient="1"/>
+    <toolbar startcolor="ffffff" endcolor="cccccc" isgradient="1" transparentheader="0" transparentfooter="0"/>
+    <share>
+      <sharepoints>facebook,twitter,delicious,digg,tumblr,live,myspace,reddit,stumbleupon,linkedin,more</sharepoints>
+      <customcode/>
+      <shareDescription>Check out the fabulous things I found in the eEdition</shareDescription>
+      <shareiconsurl>http://pub.epageview.com/scriptslib/assets/icons/addthis/</shareiconsurl>
+    </share>
+    <email>
+      <config>
+        <emailurl>http://assets.epageview.com/ihdpservices/SendMail.aspx</emailurl>
+        <cropurl>http://assets.epageview.com/ihdpservices/CropMail.aspx</cropurl>
+      </config>
+    </email>
+    <flippingspeed>1000</flippingspeed>
+    <rtlenable>0</rtlenable>
+    <searchhighlight enable="1" color="ffef00"/>
+    <notes width="200" height="150"/>
+    <bookmarks defaultcolor="cccccc" defaulttextcolor="0"/>
+    <links color="0xcccccc" opacity="0.3" linkshighlightduration="3000" showmessage="0"/>
+    <sidebarwidth>430</sidebarwidth>
+    <serversupport type="0" url="http://localhost/IHDPServer/Default.aspx"/>
+    <ecommerce>
+      <producturl>http://shop.epageview.com/product/product.php?ID=$ProductID</producturl>
+      <checkouturl>http://shop.epageview.com/index.php?route=checkout</checkouturl>
+    </ecommerce>
+    <initpagemode>2</initpagemode>
+    <publisherversion>Aglaia Software IHDP Professional 3.4.6</publisherversion>
+    <license holdername="GlobusFamilyofBrands" licensetype="IHDP Professional" holderemail="aramsundar@globusfamily.ca"/>
+    <sec/>
+    <secstart>0</secstart>
+    <musicfile/>
+    <enablemusic>1</enablemusic>
+    <dialogeffect enable="1" effectduration="200"/>
+    <printcopyright enable="0" text="Copyright (c) IHDP Software" x="0" y="25" fontsize="11"/>
+    <zoomonsearch enable="1"/>
+    <tabs startcolor="fffffd" endcolor="333333" isgradient="1" gradienttype="linear" fontcolor="0"/>
+    <enablenavigationarrow arrowcolor="ff9966" arrowtype="Blue">0</enablenavigationarrow>
+  </appsettings>
+</viewersettings>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GetLanguageResult>
+<locale>
+  <!-- Tooltips-->
+  <item name="ttCrop"><![CDATA[ גזור]]></item>
+  <item name="ttPrint"><![CDATA[ הדפס]]></item>
+  <item name="ttShare"><![CDATA[ שתף]]></item>
+  <item name="ttSettings"><![CDATA[ הגדרות]]></item>
+  <item name="ttBackCover"><![CDATA[ כריכה אחורית]]></item>
+  <item name="ttBookmarks"><![CDATA[ סימניות]]></item>
+  <item name="ttNotes"><![CDATA[ הערות]]></item>
+  <item name="ttRSSFeeds"><![CDATA[ RSS]]></item>
+  <item name="ttSinglePage"><![CDATA[ תצוגת דף יחיד]]></item>
+  <item name="ttDoublePage"><![CDATA[ צוגת דף כפולה]]></item>
+  <item name="ttFirstPage"><![CDATA[ עמוד ראשון]]></item>
+  <item name="ttPreviousPage"><![CDATA[ עמוד קודם]]></item>
+  <item name="ttNextPage"><![CDATA[ עמוד הבא]]></item>
+  <item name="ttLastPage"><![CDATA[ עמוד אחרון]]></item>
+  <item name="ttCurrentPage"><![CDATA[ $total מתוך $page אתה בעמוד]]></item>
+  <item name="ttFullScreen"><![CDATA[ מסך מלא]]></item>
+  <item name="ttNormalScreen"><![CDATA[ מסך רגיל]]></item>
+  <item name="ttSearch"><![CDATA[ חיפוש]]></item>
+  <item name="ttAdvanceSearch"><![CDATA[ חיפוש מתקדם]]></item>
+  <item name="ttDownloadPDF"><![CDATA[ PDF הורד]]></item>
+  <item name="ttTranslate"><![CDATA[ תרגם]]></item>
+  <item name="ttSearchCurrent"><![CDATA[ חפש]]></item>
+  <item name="ttSearchArchive"><![CDATA[ חפש בארכיון]]></item>
+  <item name="ttHelp"><![CDATA[ עזרה]]></item>
+  <item name="ttPlay"><![CDATA[ נגן]]></item>
+  <item name="ttPause"><![CDATA[ הפסק]]></item>
+  <item name="ttSlideShowSpeed"><![CDATA[ מהירות תצוגה]]></item>
+  <item name="ttSlow"><![CDATA[ לאט]]></item>
+  <item name="ttMedium"><![CDATA[ בנוני]]></item>
+  <item name="ttFast"><![CDATA[ מהר]]></item>
+  <item name="ttTableOfContent"><![CDATA[ תוכן ענינים]]></item>
+  <item name="ttDeleteNote"><![CDATA[ מחק הערה]]></item>
+  <item name="ttDeleteBookmark"><![CDATA[ מחק סמניה]]></item>
+
+  <!--Tabs -->
+  <item name="tbMenu"><![CDATA[ טירפת]]></item>
+  <item name="tbArchive"><![CDATA[ ארכיון]]></item>
+  <item name="tbSearch"><![CDATA[ שפח]]></item>
+  <item name="tbTOC"><![CDATA[ תוכן עניניים]]></item>
+  <item name="tbThumbnails"><![CDATA[ תמונות מוקטנות]]></item>
+  <item name="tbLinks"><![CDATA[ מפרסמים]]></item>
+  <item name="tbMedia"><![CDATA[ מולטימדיה]]></item>
+  <item name="tbPanelSearchTerm"><![CDATA[ :ביטוי לחיפוש]]></item>
+
+
+  <!--Headers -->
+  <item name="hPage"><![CDATA[עמוד]]></item>
+  <item name="hArticle"><![CDATA[מאמר]]></item>
+  <item name="hdescription"><![CDATA[ :תאור]]></item>
+  <item name="untitledarchive"><![CDATA[ ללא כותרת ארכיון]]></item>
+  <item name="securedpage"><![CDATA[עמוד מאובטח]]></item>
+
+  <!--Dialogs-->
+
+  <!-- Download PDF-->
+  <item name="dlgDownloadPDFHeader"><![CDATA[ PDF הורד]]></item>
+  <item name="dlgDownloadSubheader"><![CDATA[ ]]></item>
+  <item name="dlgSavePage"><![CDATA[ שמור עמוד]]></item>
+  <item name="dlgSaveAll"><![CDATA[ שמור את כל הדפים]]></item>
+  <item name="dlgSavePageFrom"><![CDATA[ שמור מעמוד]]></item>
+  <item name="dlgSavePageTo"><![CDATA[ עד עמוד]]></item>
+  <item name="dlgFileName"><![CDATA[ :שם קובץ]]></item>
+  <item name="dlgFileSize"><![CDATA[ :גודל עמוד]]></item>
+  <item name="dlgSystemRequirement"><![CDATA[ :דרישות מערכת]]></item>
+
+  <!-- Settings-->
+  <item name="dlgSettingsHeader"><![CDATA[ :הגדרות]]></item>
+  <item name="dlgSettingsSubheader"><![CDATA[]]></item>
+  <item name="dlgShowPageShadow"><![CDATA[ הצג צל בעמוד ]]></item>
+  <item name="dlgShowHotspots"><![CDATA[ הצג קשורים]]></item>
+  <item name="dlgShowTooltips"><![CDATA[ הצג עזרה לקישורים]]></item>
+  <item name="dlgLanguage"><![CDATA[ :שפה]]></item>
+  <item name="dlgSlideShowDuration"><![CDATA[ משך תצוגה אוטמטית]]></item>
+  <item name="dlgSeconds"><![CDATA[ שניות]]></item>
+  <item name="dlgSettingsTheme"><![CDATA[ Theme]]></item>
+  <item name="dlgPlayFlippingSound"><![CDATA[ השמע קול של דפדוף]]></item>
+  <item name="dlgPlaySlideShowEvery"><![CDATA[ החלף עמוד אוטמטית]]></item>
+  
+  <!-- Translate -->
+  <item name="dlgTranslateHeader"><![CDATA[ תרגום]]></item>
+  <item name="dlgLeftPage"><![CDATA[ דף שמאל]]></item>
+  <item name="dlgRightPage"><![CDATA[ דף ימין]]></item>
+  <item name="dlgSelectLanguage"><![CDATA[ :בחר שפה]]></item>
+
+  <!-- Print-->
+  <item name="dlgPrintHeader"><![CDATA[ :הדפס]]></item>
+  <item name="dlgPrintSubheader"><![CDATA[]]></item>
+  <item name="dlgPrint"><![CDATA[ הדפס]]></item>
+  <item name="dlgPrintCurrentPage"><![CDATA[ הדפס עמוד נוכחי]]></item>
+  <item name="dlgPrintFrom"><![CDATA[ הדפס מעמוד]]></item>
+  <item name="dlgPrintTo"><![CDATA[ עד]]></item>
+  
+  <item name="dlgPrintLeft"><![CDATA[ הדפס עמוד שמאלי]]></item>
+  <item name="dlgPrintRight"><![CDATA[ הדפס עמוד ימני]]></item>
+  <!-- Bookmarks-->
+  <item name="dlgBookmarkHeader"><![CDATA[ :סמניות]]></item>
+  <item name="dlgBookmarkSubheader"><![CDATA[]]></item>
+  <item name="dlgBookmarkDescription"><![CDATA[ הכנס את הטקסט עבור הסמניה]]></item>
+  <item name="dlgMangeBookmark"><![CDATA[ נהל סמניה]]></item>
+  <item name="dlgMangeLeftPageRadio"><![CDATA[ הוסף סמניה לדף שמאל]]></item>
+  <item name="dlgMangeRightPageRadio"><![CDATA[ הוסף סמניה לדף ימין]]></item>
+  <item name="dlgBookmarkTextColor"><![CDATA[ צבע הטקסט עבור סמניה]]></item>
+  <item name="dlgBookmarkColor"><![CDATA[ :צבע סמניה]]></item>
+  <item name="dlgBookmarkTextHeader"><![CDATA[ סמניות]]></item>
+  <item name="dlgBookmarkAdded"><![CDATA[ סמניה כבר קיימת עבור דף זה]]></item>
+
+
+  
+  
+  <!-- Email -->
+  <item name="dlgEmailHeader"><![CDATA[ דואר אלקטרוני]]></item>
+  <item name="dlgEmailSubHeader"><![CDATA[]]></item>
+  <item name="dlgEmailLinkType"><![CDATA[ :בחר קישור]]></item>
+  <item name="dlgEmailCurrentPage"><![CDATA[ עמוד נוכחי]]></item>
+  <item name="dlgEmailThisIssue"><![CDATA[ מהדורה נוכחית]]></item>
+  <item name="dlgEmailFromName"><![CDATA[ שמך]]></item>
+  <item name="dlgEmailToName"><![CDATA[ שם הנמען]]></item>
+  <item name="dlgEmailLeft"><![CDATA[ שמאל]]></item>
+  <item name="dlgEmailRight"><![CDATA[ ימין]]></item>		
+  <item name="dlgEmailSendCC"><![CDATA[ שלח העתק אלי]]></item>
+
+  <item name="dlgEmailFrom"><![CDATA[ מאת]]></item>
+  <item name="dlgEmailTo"><![CDATA[ אל]]></item>
+  <item name="dlgEmailMultiple"><![CDATA[ מספר נמענים מופרדים בפסיק]]></item>
+  <item name="dlgEmailSubject"><![CDATA[ נושא]]></item>
+  <item name="dlgEmailMessage"><![CDATA[ הודעה]]></item>
+
+  <!-- Notes-->
+  <item name="dlgNotesHeader"><![CDATA[:הערות]]></item>
+  <item name="dlgNotesSubheader"><![CDATA[]]></item>
+  <item name="dlgMangeNotes"><![CDATA[ נהל הערות]]></item>
+
+  <!-- Email Clip Dialog -->
+  <item name="dlgImageClipHeader"><![CDATA[ :שלח תמונה]]></item>
+  <item name="dlgImageClipSubheader"><![CDATA[]]></item>
+
+  <!-- Crop-->
+  <item name="dlgCropHeader"><![CDATA[ גזור תמונה]]></item>
+  <item name="dlgCropSubheader"><![CDATA[ השתמש בתמונה]]></item>
+  <item name="dlgCropHelp"><![CDATA[ עזרה]]></item>
+  
+    <!-- FullScreen -->
+  <item name="dlgFullScreenTitle"><![CDATA[ מסך מלא]]></item>
+  <item name="dlgFullScreenHeader"><![CDATA[ שם לב שה<br />are not available in full screen mode:<br/><br/><p>]]></item>
+  <item name="dlgFullScreenSearch"><![CDATA[<li>חיפוש</li>]]></item>
+  <item name="dlgFullScreenSend"><![CDATA[<li>שליחה</li>]]></item>
+  <item name="dlgFullScreenBookmark"><![CDATA[<li>הוספת סמניה</li>]]></item>
+  <item name="dlgFullScreenNote"><![CDATA[<li>הוספת הערה</li>]]></item>
+  <item name="dlgFullScreenTypingPageNumber"><![CDATA[<li>הקלדת מספר עמוד</li>]]></item>
+  <item name="dlgFullScreenConfirm"><![CDATA[</p>?האם לפתוח מסך מלא]]></item>
+
+  <!-- Help-->
+  <item name="dlgHelpHeader"><![CDATA[ :עזרה ]]></item>
+  <item name="dlgHelpSubheader"><![CDATA[ ]]></item>
+
+  <item name="dlgHelpNavigationArrows"><![CDATA[ Navigation Arrows- Click on the internal arrows to turn the pages. Click on the external arrows take you directly to the front cover (first page) or to the back cover (last page).]]></item>
+  <item name="dlgHelpJumpToPage"><![CDATA[ Jump to page- Jump to any page by entering the page number directly in the box then hit "Enter"(or "Return") on your keyboard.]]></item>
+  <item name="dlgHelpFullScreen"><![CDATA[ Full Screen – click for full screen view mode, press ESC to exit full screen mode]]></item>
+  <item name="dlgHelpDownloadPDF"><![CDATA[ Download PDF- Click to download the online edition as a PDF document.]]></item>
+  <item name="dlgHelpCrop"><![CDATA[ Crop- Click to select specific area to crop and send as email]]></item>
+  <item name="dlgHelpPrint"><![CDATA[ Print- Click to print any desired page/s or the entire edition.]]></item>
+  <item name="dlgHelpShare"><![CDATA[ Share –Share your edition/ content everywhere (Facebook, Twitter, etc).]]></item>
+  <item name="dlgHelpTOC"><![CDATA[ TOC- Click to view the table of content page in your edition.]]></item>
+  <item name="dlgHelpSettings"><![CDATA[ Setting- Allows you to modify the setting for your personal view.  Select your desired page viewing, sound option, shadow effect, automatic hotspot highlighting, etc.]]></item>
+  <item name="dlgHelpPrint"><![CDATA[ Print- Click to print any desired page/s or the entire edition.]]></item>
+  <item name="dlgHelpBookmark"><![CDATA[ Bookmark-> Allows you to add bookmarks to your digital edition.]]></item>
+  <item name="dlgHelpNote"><![CDATA[ Note-> Allows you to add notes anywhere on the page. When you wish to view all your notes, simply click on the note icon again.]]></item>
+  <item name="dlgHelpPageMode"><![CDATA[ Page mode- Click to toggle between single and double page view mode.]]></item>
+  <item name="dlgHelpMenu"><![CDATA[ Menu-> under the menu you have several buttons: interactive table of content, Thumbnails button to view a smaller version of all pages simultaneously. Clicking on a thumbnail will open the selected page. Multimedia button to view videos and audio in your edition if any.]]></item>
+  <item name="dlgHelpSearch"><![CDATA[ Search-Enter your phrase or any word in the search box, and then click "GO". You can improve your search by adding an asterisk (*) after a word, our search engine will pull up results with all variations of the word. Example: Search* our search engine will pull up pages with the words searches, searching, searchable, etc. By replacing a letter with a word with a question mark (?), our search engine will pull up pages that include any character in that position. Example: b?g , our search engine will pull up pages with the words big, beg, bag, etc. clicking on the search result page thumbnail will take you directly to that page in the edition and your search will be highlighted on the page.]]></item>
+
+  <!--Buttons -->
+  <item name="btnHelp"><![CDATA[ עזרה]]></item>
+  <item name="btnDownload"><![CDATA[ הורדה]]></item>
+  <item name="btnPrint"><![CDATA[ הדפס]]></item>
+  <item name="btnOk"><![CDATA[ אישור]]></item>
+  <item name="btnCancel"><![CDATA[ ביטול]]></item>
+  <item name="btnClose"><![CDATA[ סגור]]></item>
+  <item name="btnAddBookmark"><![CDATA[ הוסף סמניה]]></item>
+  <item name="btnDeleteAllBookmark"><![CDATA[ מחק סמניה]]></item>
+  <item name="btnAddNewNotes"><![CDATA[ הוסף הערה]]></item>
+  <item name="btnDeleteAllNotes"><![CDATA[ מחק את כל הערות]]></item>
+  <item name="btnEmailSend"><![CDATA[ שלח]]></item>
+  <item name="btnUse"><![CDATA[ השתמש]]></item>
+  <item name="btnTranslate"><![CDATA[ תרגם]]></item>
+  <!--Search Panel -->
+  <item name="noresultfound"><![CDATA[ אין תוצאות חיפוש]]></item> 
+  <!--IHDP Mode-->
+  <item name="featurenotenabled"><![CDATA[ התכונה לא מאופשרת]]></item> 
+  
+  <item name="dlgLoginTitle"><![CDATA[ התחברות]]></item>
+  <item name="dlgLoginPassword"><![CDATA[ סיסמה]]></item>
+  <item name="dlgLoginFailed"><![CDATA[! הכניסה נכשלה]]></item>
+  <item name="dlgLoginLoginButton"><![CDATA[ התחברות]]></item> 
+  <item name="dlgLoginSecurityInfoText"><![CDATA[. דף זה מאובטח. אנא התחבר כדי לצפות בדף זה]]></item>
+  
+  <item name="dlgSecurityPromptText"><![CDATA[ ספר זה הוא מאובטח הדפים הבאים מאובטחת]]></item>
+  <item name="ttMusicButtonText"><![CDATA[ השתקה/ביטול השתקה]]></item>
+  <item name="dlgSecurityInfoText"><![CDATA[ עדימ תחטבא ]]></item>
+</locale>
+</GetLanguageResult>

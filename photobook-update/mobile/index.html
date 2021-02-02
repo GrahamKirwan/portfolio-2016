@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title></title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+<link rel="stylesheet" href="css/jpreloader.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="//code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<script type="application/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="js/info.js"></script>
+<script type="text/javascript" src="js/aglaia.js"></script>
+<script type="text/javascript" src="js/jpreLoader.min.js"></script>
+
+<style type="text/css" media="all">
+body,ul,li {
+	padding:0;
+	margin:0;
+}
+
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	font-family:helvetica;
+}
+
+#wrapper {
+	float:left;
+	position:relative;	
+	z-index:1;			
+	overflow:hidden;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	-o-border-radius:0px;
+	border-radius:0px;
+	
+}
+
+
+#scroller {
+	
+	height:100%;
+	float:left;
+	padding:0;
+}
+
+#scroller ul {
+	list-style:none;
+	display:block;
+	float:left;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	text-align:left;
+}
+
+#scroller li {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	display:block; float:left;
+	
+	text-align:center;
+	font-family:georgia;
+	font-size:18px;
+	line-height:140%;
+}
+
+
+#imgbox 
+{
+    vertical-align : middle;
+    position : absolute;
+    border: 1px solid #999;
+    background : #FFFFFF; 
+    filter: Alpha(Opacity=100);
+    visibility : hidden;
+    z-index : 5000;
+    overflow : hidden;
+    text-align : center;
+}
+
+.landscape_link{
+	/*position:absolute;
+	 background-color:#b25d64; 
+	opacity: 0.2;	
+	*/
+	}
+.portrait_link{
+	/*position:absolute;
+	background-color:#b25d64; 
+	opacity: 0.2;
+		*/
+}
+.p_link{
+	display:block;
+	 height:100%;	
+	
+}
+
+
+
+
+#chat .ui-icon { background:  url(images/book2.png) 50% 50% no-repeat; background-size: 18px 18px; }
+/*  #share .ui-icon { background:  url(images/share.png) 50% 50% no-repeat; background-size: 18px 18px; } */
+ #print .ui-icon { background:  url(images/print2.png) 50% 50% no-repeat; background-size: 18px 18px; }   
+
+
+.ui-corner-left {
+    border-bottom-left-radius: 0em;
+    border-top-left-radius: 0em;
+}
+
+.ui-corner-right {
+    border-bottom-right-radius: 0em;
+    border-top-right-radius: 0em;
+}
+.ui-corner-bottom {
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+.ui-corner-top {
+    border-top-left-radius: 0em;
+    border-top-right-radius: 0em;
+}
+.ui-btn-inner {
+   
+	border: 0px;
+}
+.ui-btn-up-a {
+ /*background: #111 linear-gradient(#3c3c3c, #111) repeat scroll 0 0;*/
+ background: #f6f6f6 linear-gradient(#f6f6f6, #f6f6f6) repeat scroll 0 0;
+ border:  0px;
+ color: #000000;
+ text-shadow: none;
+}
+.ui-bar-a {
+  text-shadow: none;
+  /*background: #111 linear-gradient(#3c3c3c, #111) repeat scroll 0 0;*/
+ background: #f6f6f6 linear-gradient(#f6f6f6, #f6f6f6) repeat scroll 0 0;
+}
+
+</style>
+</head>
+
+<body>
+<!-- This section is for Splash Screen -->
+<div id="jpreContent">
+	<section class=selected>
+	        <p style="font-size:0.6em; font-weight:100; color:#999999; font-family:Arial, Helvetica, sans-serif">Loading Digital Edition ...</p>
+          
+	</section>
+	
+</div>
+<!-- End of Splash Screen -->
+
+<div data-role="page" data-theme="a" data-content-theme="a" >
+
+	<div data-role="header" >
+     
+    
+  <div data-role="controlgroup" data-type="horizontal" style="text-align:center; margin-top:2px; padding-top:0; margin-bottom:2px; padding-bottom:0; ">
+
+         <a href="index.html" rel="external" data-role="button" data-icon="home" data-iconpos="top" style="width:16%; height:45px; font-size:x-small; ">Home</a>
+       <a href="thumb.html" id="thumb" rel="external" data-role="button" data-icon="grid" data-iconpos="top" style=" height:45px; font-size:x-small; width:21%;">Thumbnail</a> 
+<a href="share.html" id="share" data-role="button" data-icon="forward" rel="external"  data-iconpos="top" style=" height:45px; font-size:x-small; width:16%;">Share</a>
+<a href="search.html" id="search" data-role="button" data-icon="search" data-iconpos="top" rel="external" style=" height:45px; font-size:x-small; width:16%;">Search</a>
+
+
+
+<a href="" id="download" data-role="button" data-icon="custom" data-iconpos="top" rel="external" style=" height:45px; font-size:x-small; width:20%;" target="_blank">Download</a>
+
+</div><!-- /footer -->
+     
+	</div><!-- /header -->
+
+	<div data-role="content" style="margin:0; padding:0;" >	
+<div id="wrapper" >
+
+	<div id="scroller">
+		<ul id="thelist">
+			 		<li id="intro" class="landscape_link">
+                    </li>
+                	<li id="cover">
+						<div id='ZPage_1'>
+                        	<img  width="100%"  id='ZPages_1' height="100%"  />
+                        		
+                        </div>
+                    </li>
+                    	<li>
+						<div id='ZPage_2'>
+                        	<img  width="100%"  height="100%" id='ZPages_2' />
+                        		
+                        </div>
+                    </li>
+                    	<li>
+						<div id='ZPage_3'>
+                        	<img  width="100%"  height="100%" id='ZPages_3' />
+                        		
+                        </div>
+                    </li>
+                    	<li>
+						<div id='ZPage_4'>
+                        	<img   width="100%"  height="100%" id='ZPages_4' />
+                        		
+                        </div>
+                    </li>
+                    	<li>
+						<div id='ZPage_5'>
+                        	<img   width="100%"  height="100%" id='ZPages_5' />
+                        		
+                        </div>
+                    </li>
+                    	<li>
+						<div id='ZPage_6'>
+                        	<img   width="100%"  height="100%" id='ZPages_6' />
+                        		
+                        </div>
+                    </li>
+                    	<li>
+						<div id='ZPage_7'>
+                        	<img  width="100%"  height="100%" id='ZPages_7' />
+                        	
+                        </div>
+                    </li>
+					<li><div id="ZPage_8"><img id="ZPages_8"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_9"><img id="ZPages_9"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_10"><img id="ZPages_10"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_11"><img id="ZPages_11"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_12"><img id="ZPages_12"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_13"><img id="ZPages_13"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_14"><img id="ZPages_14"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_15"><img id="ZPages_15"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_16"><img id="ZPages_16"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_17"><img id="ZPages_17"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_18"><img id="ZPages_18"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_19"><img id="ZPages_19"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_20"><img id="ZPages_20"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_21"><img id="ZPages_21"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_22"><img id="ZPages_22"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_23"><img id="ZPages_23"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_24"><img id="ZPages_24"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_25"><img id="ZPages_25"  width="100%"  height="100%" /></div></li>
+<li><div id="ZPage_26"><img id="ZPages_26"  width="100%"  height="100%" /></div></li>
+
+			</ul>
+	</div>
+</div>
+
+ 
+
+<div style="position:absolute; z-index:2; color:#333; margin-left:5px;" id="page_label"></div>
+</div> <!-- Content --->
+	
+
+</div>
+<script type="text/javascript" src="js/footer.js"></script>
+
+</body>
+</html>

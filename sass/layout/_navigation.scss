@@ -1,5 +1,7 @@
 .header__navigation {
 
+    flex: 1;
+
     @include respond(tab-port) {
         display: none;
     }
@@ -13,7 +15,7 @@
     &--list {
         display: block;
         float: right;
-        padding: 5rem 7rem;
+        padding: 5rem 0rem;
     }
 
     &--item {

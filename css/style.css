@@ -349,7 +349,7 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem;
+      max-width: 80rem;
       padding: 0 3rem; } }
   .row::after {
     content: "";
@@ -364,6 +364,9 @@ body {
           margin-right: 0;
           margin-bottom: 6rem; } }
     @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+    @media (max-width: 37.5em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -384,12 +387,13 @@ body {
 .header {
   height: 100vh;
   position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 3rem;
-    left: 6rem; }
+  .header__flex {
+    display: flex;
+    max-width: 90vw;
+    align-items: center;
+    margin: 0 auto; }
   .header__logo {
-    height: 12rem; }
+    height: 17rem; }
   .header__text-box {
     display: block;
     position: absolute;
@@ -414,33 +418,42 @@ body {
       .header__image {
         display: none; } }
 
-@media (max-width: 56.25em) {
-  .header__navigation {
-    display: none; } }
+#a622e68e-7a65-46e9-94a9-d455de519afc {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  right: 0;
+  padding-left: 300px;
+  overflow: hidden; }
+  @media (max-width: 75em) {
+    #a622e68e-7a65-46e9-94a9-d455de519afc {
+      display: none; } }
 
-.header__navigation--nav {
-  display: block; }
-
-.header__navigation--list {
-  display: block;
-  float: right;
-  padding: 5rem 7rem; }
-
-.header__navigation--item {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0 3rem;
-  letter-spacing: .2rem;
-  transition: all .3s; }
-  .header__navigation--item:hover {
-    border-bottom: 0.3rem solid #8b43ff; }
-
-.header__navigation--link {
-  color: #8b43ff;
-  text-decoration: none; }
+.header__navigation {
+  flex: 1; }
+  @media (max-width: 56.25em) {
+    .header__navigation {
+      display: none; } }
+  .header__navigation--nav {
+    display: block; }
+  .header__navigation--list {
+    display: block;
+    float: right;
+    padding: 5rem 0rem; }
+  .header__navigation--item {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 3rem;
+    letter-spacing: .2rem;
+    transition: all .3s; }
+    .header__navigation--item:hover {
+      border-bottom: 0.3rem solid #8b43ff; }
+  .header__navigation--link {
+    color: #8b43ff;
+    text-decoration: none; }
 
 .section-about {
   background-color: #8b43ff;

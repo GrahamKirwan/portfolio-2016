@@ -9,7 +9,7 @@
   "author": "Graham Kirwan",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "bootstrap-grid-only-css": "^4.1.3"
